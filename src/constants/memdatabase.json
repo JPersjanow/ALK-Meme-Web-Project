@@ -1,0 +1,354 @@
+{
+  "memes": [
+    {
+      "id": 1,
+      "title": "Mem 1",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/1mem"
+    },
+    {
+      "id": 2,
+      "title": "Mem 2",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/2mem"
+    },
+    {
+      "id": 3,
+      "title": "Mem 3",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/3mem"
+    },
+    {
+      "id": 4,
+      "title": "Mem 4",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/4mem"
+    },
+    {
+      "id": 5,
+      "title": "Mem 5",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/5mem"
+    },
+    {
+      "id": 6,
+      "title": "Mem 6",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/6mem"
+    },
+    {
+      "id": 7,
+      "title": "Mem 7",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/7mem"
+    },
+    {
+      "id": 8,
+      "title": "Mem 8",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/8mem"
+    },
+    {
+      "id": 9,
+      "title": "Mem 9",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/9mem"
+    },
+    {
+      "id": 10,
+      "title": "Mem 10",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/10mem"
+    },
+    {
+      "id": 11,
+      "title": "Mem 11",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/11mem"
+    },
+    {
+      "id": 12,
+      "title": "Mem 12",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/12mem"
+    },
+    {
+      "id": 13,
+      "title": "Mem 13",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/13mem"
+    },
+    {
+      "id": 14,
+      "title": "Mem 14",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/14mem"
+    },
+    {
+      "id": 15,
+      "title": "Mem 15",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/15mem"
+    },
+    {
+      "id": 16,
+      "title": "Mem 16",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/16mem"
+    },
+    {
+      "id": 17,
+      "title": "Mem 17",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/17mem"
+    },
+    {
+      "id": 18,
+      "title": "Mem 18",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/18mem"
+    },
+    {
+      "id": 19,
+      "title": "Mem 19",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/19mem"
+    },
+    {
+      "id": 20,
+      "title": "Mem 20",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/20mem"
+    },
+    {
+      "id": 21,
+      "title": "Mem 21",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/21mem"
+    },
+    {
+      "id": 22,
+      "title": "Mem 22",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/22mem"
+    },
+    {
+      "id": 23,
+      "title": "Mem 23",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/23mem"
+    },
+    {
+      "id": 24,
+      "title": "Mem 24",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/24mem"
+    },
+    {
+      "id": 25,
+      "title": "Mem 25",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/25mem"
+    },
+    {
+      "id": 26,
+      "title": "Mem 26",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/26mem"
+    },
+    {
+      "id": 27,
+      "title": "Mem 27",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/27mem"
+    },
+    {
+      "id": 28,
+      "title": "Mem 28",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/28mem"
+    },
+    {
+      "id": 29,
+      "title": "Mem 29",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/29mem"
+    },
+    {
+      "id": 30,
+      "title": "Mem 30",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/30mem"
+    },
+    {
+      "id": 31,
+      "title": "Mem 31",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/31mem"
+    },
+    {
+      "id": 32,
+      "title": "Mem 32",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/32mem"
+    },
+    {
+      "id": 33,
+      "title": "Mem 33",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/33mem"
+    },
+    {
+      "id": 34,
+      "title": "Mem 34",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/34mem"
+    },
+    {
+      "id": 35,
+      "title": "Mem 35",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/35mem"
+    },
+    {
+      "id": 36,
+      "title": "Mem 36",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/36mem"
+    },
+    {
+      "id": 37,
+      "title": "Mem 37",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/37mem"
+    },
+    {
+      "id": 38,
+      "title": "Mem 38",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/38mem"
+    },
+    {
+      "id": 39,
+      "title": "Mem 39",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/39mem"
+    },
+    {
+      "id": 40,
+      "title": "Mem 40",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/40mem"
+    },
+    {
+      "id": 41,
+      "title": "Mem 41",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/41mem"
+    },
+    {
+      "id": 42,
+      "title": "Mem 42",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/42mem"
+    },
+    {
+      "id": 43,
+      "title": "Mem 43",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/43mem"
+    },
+    {
+      "id": 44,
+      "title": "Mem 44",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/44mem"
+    },
+    {
+      "id": 45,
+      "title": "Mem 45",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/45mem"
+    },
+    {
+      "id": 46,
+      "title": "Mem 46",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/46mem"
+    },
+    {
+      "id": 47,
+      "title": "Mem 47",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/47mem"
+    },
+    {
+      "id": 48,
+      "title": "Mem 48",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/48mem"
+    },
+    {
+      "id": 49,
+      "title": "Mem 49",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/49mem"
+    },
+    {
+      "id": 50,
+      "title": "Mem 50",
+      "upvotes": 0,
+      "downvotes": 0,
+      "img": "../assets/50mem"
+    }
+  ]
+}
