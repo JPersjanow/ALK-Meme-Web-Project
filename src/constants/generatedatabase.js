@@ -26,7 +26,7 @@ console.log(titlemem);
 let pathmem = [];
 
 for (let i = 1; i <= 50; i++) {
-  pathmem.push(`../assets/${i}mem`);
+  pathmem.push(`../assets/${i}mem.jpeg`);
 }
 
 console.log(pathmem);

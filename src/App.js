@@ -1,21 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { MemeCompontentPersil } from "./components/MemeComponent";
-
-function downloadMemes() {
-  fetch("http://localhost:3000/memes")
-    .then((response) => response.json())
-    .then((memes) => {
-      console.log(memes);
-    });
-}
+import MemeListComponent from "./components/MemeListCompontent";
 
 function App() {
   return (
     <div className="App">
-      <script>{downloadMemes()}</script>
-      <MemeCompontentPersil title="TEST1"></MemeCompontentPersil>
-      <header className="App-header">
+      <MemeListComponent></MemeListComponent>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -28,7 +19,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
