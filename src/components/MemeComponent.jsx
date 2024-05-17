@@ -6,6 +6,7 @@ export function MemeCompontent({ meme }) {
   const [img, setImg] = useState(meme.img);
   const [upvotes, setUpvotes] = useState(meme.upvotes);
   const [downvotes, setDownvotes] = useState(meme.downvotes);
+  
   return (
     <div>
       <h1>{title}</h1>
