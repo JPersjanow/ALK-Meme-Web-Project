@@ -14,8 +14,8 @@ function App() {
         <Routes>
         <Route path="/" element={<HotPage></HotPage>}></Route>
         <Route path="/hot" element={<HotPage></HotPage>}></Route>
-        <Route path="/regular" element={<ErrorPage></ErrorPage>}></Route>
-        <Route path="/*" element={<RegularPage></RegularPage>}></Route>
+        <Route path="/regular" element={<RegularPage></RegularPage>}></Route>
+        <Route path="/*" element={<ErrorPage></ErrorPage>}></Route>
         </Routes>
       </main>
       </BrowserRouter>
