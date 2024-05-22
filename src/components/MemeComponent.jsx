@@ -30,6 +30,32 @@ export function MemeCompontent({ meme }) {
         console.error("Error:", error);
       });
   }
+  function updateDisLike() {
+    // Pobranie danych z bazy
+    axios
+      .get(`http://localhost:3000/memes/${meme.id}`)
+      .then((response) => {
+        const actualMeme = response.data;
+        const updatedDownvotes = actualMeme.downvotes + 1;
+        const payloaddownvotes = { ...actualMeme, downvotes: updatedDownvotes };
+        console.log("pobieram najnowsze dane downvotes z bazy");
+
+        // wysyłam zaktualizowane dane
+        return axios.put(
+          `http://localhost:3000/memes/${meme.id}`,
+          payloaddownvotes
+        );
+      })
+      .then((response) => {
+        console.log("wysyłam nowe dane downvotes");
+        console.log("Success:", response.data);
+
+        setDownvotes(response.data.downvotes); // Zaktualizuj stan z odpowiedzi serwera
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
 
   return (
     <div>
@@ -38,6 +64,7 @@ export function MemeCompontent({ meme }) {
       <h2>{upvotes}</h2>
       <h2>{downvotes}</h2>
       <button onClick={updateLike}>Upvote</button>
+      <button onClick={updateDisLike}>Downvote</button>
     </div>
   );
 }
