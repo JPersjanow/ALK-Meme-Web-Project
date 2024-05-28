@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import axios from "axios";
-import * as endpoints from "../constants/endpoints";
+import * as constants from "../constants/constants";
 
 export function MemeCompontent({ meme, setMemeChangedFlag }) {
   const [title, setTitle] = useState(meme.title);
   const [img, setImg] = useState(meme.img);
   const [upvotes, setUpvotes] = useState(meme.upvotes);
   const [downvotes, setDownvotes] = useState(meme.downvotes);
+  const location = useLocation().pathname;
 
   const updateStateAndReturnPayload = (type, response) => {
     switch (type) {
@@ -31,10 +33,10 @@ export function MemeCompontent({ meme, setMemeChangedFlag }) {
 
   const updateLikes = (type) => () => {
     axios
-      .get(endpoints.MEME(meme.id))
+      .get(constants.endpoints.MEME(meme.id))
       .then((response) => {
         const payload = updateStateAndReturnPayload(type, response);
-        return axios.put(endpoints.MEME(meme.id), payload);
+        return axios.put(constants.endpoints.MEME(meme.id), payload);
       })
       .then((response) => {
         console.log("Success:", response.data);
@@ -45,11 +47,16 @@ export function MemeCompontent({ meme, setMemeChangedFlag }) {
   };
 
   useEffect(() => {
-    if (upvotes - downvotes > 5 || downvotes > upvotes) {
+    if (
+      (location === constants.routes.HOTPAGEROUTE &&
+        upvotes - downvotes <= 5) ||
+      (location === constants.routes.REGULARPAGEROUTE &&
+        upvotes - downvotes > 5)
+    ) {
       console.log("change needed");
       setMemeChangedFlag(true);
     }
-  }, [upvotes, downvotes, setMemeChangedFlag]);
+  }, [upvotes, downvotes, setMemeChangedFlag, location]);
 
   return (
     <div>

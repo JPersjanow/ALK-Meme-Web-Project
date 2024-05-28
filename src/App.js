@@ -4,7 +4,7 @@ import { HotPage } from "./pages/HotPage";
 import { RegularPage } from "./pages/RegularPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import * as routesDeclarations from "./constants/routesDeclarations";
+import * as constants from "./constants/constants";
 
 function App() {
   return (
@@ -14,15 +14,15 @@ function App() {
         <main>
           <Routes>
             <Route
-              path={routesDeclarations.MAINROUTE}
+              path={constants.routes.MAINROUTE}
               element={<HotPage></HotPage>}
             ></Route>
             <Route
-              path={routesDeclarations.HOTPAGEROUTE}
+              path={constants.routes.HOTPAGEROUTE}
               element={<HotPage></HotPage>}
             ></Route>
             <Route
-              path={routesDeclarations.REGULARPAGEROUTE}
+              path={constants.routes.REGULARPAGEROUTE}
               element={<RegularPage></RegularPage>}
             ></Route>
             <Route path="/*" element={<ErrorPage></ErrorPage>}></Route>

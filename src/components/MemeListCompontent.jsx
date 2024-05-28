@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { MemeCompontent } from "./MemeComponent";
-import * as routesDeclaration from "../constants/routesDeclarations";
-import * as endpoints from "../constants/endpoints";
+import * as constants from "../constants/constants";
 
 const MemeListComponent = () => {
   const [memes, setMemes] = useState(null);
@@ -11,12 +10,12 @@ const MemeListComponent = () => {
   const location = useLocation().pathname;
 
   useEffect(() => {
-    axios.get(endpoints.MEMES).then((response) => {
+    axios.get(constants.endpoints.MEMES).then((response) => {
       const memesList = response.data;
       const filteredMemesList = memesList.filter((meme) => {
         if (
-          location === routesDeclaration.HOTPAGEROUTE ||
-          location === routesDeclaration.MAINROUTE
+          location === constants.routes.HOTPAGEROUTE ||
+          location === constants.routes.MAINROUTE
         ) {
           return meme ? meme.upvotes - meme.downvotes > 5 : null;
         } else {
