@@ -1,23 +1,35 @@
 import { useEffect, useState } from "react";
 import { MemeCompontent } from "./MemeComponent";
+import { useLocation } from "react-router-dom";
+import axios from "axios";
+import * as routesDeclaration from "../constants/routesDeclarations";
 
 const MemeListComponent = () => {
   const [memes, setMemes] = useState(null);
+  const location = useLocation().pathname;
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch("http://localhost:3000/memes");
-      const data = await response.json();
-      setMemes(data);
-    };
-    fetchData();
-  }, []);
+    axios.get("http://localhost:3000/memes").then((response) => {
+      const memesList = response.data;
+      const filteredMemesList = memesList.filter((meme) => {
+        if (
+          location === routesDeclaration.HOTPAGEROUTE ||
+          location === routesDeclaration.MAINROUTE
+        ) {
+          return meme ? meme.upvotes - meme.downvotes > 5 : null;
+        } else {
+          return meme ? meme.upvotes - meme.downvotes <= 5 : null;
+        }
+      });
+      setMemes(filteredMemesList);
+    });
+  }, [memes, location]);
 
   return (
     <div>
       {memes ? (
         memes.map((meme) => {
-          return <MemeCompontent meme={meme}></MemeCompontent>;
+          return <MemeCompontent key={meme.id} meme={meme}></MemeCompontent>;
         })
       ) : (
         <p>Loading...</p>
