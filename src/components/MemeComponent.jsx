@@ -7,55 +7,41 @@ export function MemeCompontent({ meme }) {
   const [upvotes, setUpvotes] = useState(meme.upvotes);
   const [downvotes, setDownvotes] = useState(meme.downvotes);
 
-  function updateLike() {
-    // Pobranie danych z bazy
+  const updateStateAndReturnPayload = (type, response) => {
+    switch (type) {
+      case "upvotes":
+        setUpvotes(response.data.upvotes + 1);
+        return {
+          ...response.data,
+          upvotes: response.data.upvotes + 1,
+        };
+      case "downvotes":
+        setDownvotes(response.data.downvotes + 1);
+        return {
+          ...response.data,
+          downvotes: response.data.downvotes + 1,
+        };
+      default:
+        return {
+          ...response.data,
+        };
+    }
+  };
+
+  const updateLikes = (type) => () => {
     axios
       .get(`http://localhost:3000/memes/${meme.id}`)
       .then((response) => {
-        const actualMeme = response.data;
-        const updatedUpvotes = actualMeme.upvotes + 1;
-        const payload = { ...actualMeme, upvotes: updatedUpvotes };
-        console.log("pobieram najnowsze dane z bazy");
-
-        // wysyłam zaktualizowane dane
+        const payload = updateStateAndReturnPayload(type, response);
         return axios.put(`http://localhost:3000/memes/${meme.id}`, payload);
       })
       .then((response) => {
-        console.log("wysyłam nowe dane");
         console.log("Success:", response.data);
-
-        setUpvotes(response.data.upvotes); // Zaktualizuj stan z odpowiedzi serwera
       })
       .catch((error) => {
         console.error("Error:", error);
       });
-  }
-  function updateDisLike() {
-    // Pobranie danych z bazy
-    axios
-      .get(`http://localhost:3000/memes/${meme.id}`)
-      .then((response) => {
-        const actualMeme = response.data;
-        const updatedDownvotes = actualMeme.downvotes + 1;
-        const payloaddownvotes = { ...actualMeme, downvotes: updatedDownvotes };
-        console.log("pobieram najnowsze dane downvotes z bazy");
-
-        // wysyłam zaktualizowane dane
-        return axios.put(
-          `http://localhost:3000/memes/${meme.id}`,
-          payloaddownvotes
-        );
-      })
-      .then((response) => {
-        console.log("wysyłam nowe dane downvotes");
-        console.log("Success:", response.data);
-
-        setDownvotes(response.data.downvotes); // Zaktualizuj stan z odpowiedzi serwera
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  }
+  };
 
   return (
     <div>
@@ -63,8 +49,8 @@ export function MemeCompontent({ meme }) {
       <img src={img} alt="pic" />
       <h2>{upvotes}</h2>
       <h2>{downvotes}</h2>
-      <button onClick={updateLike}>Upvote</button>
-      <button onClick={updateDisLike}>Downvote</button>
+      <button onClick={updateLikes("upvotes")}>Upvote</button>
+      <button onClick={updateLikes("downvotes")}>Downvote</button>
     </div>
   );
 }
