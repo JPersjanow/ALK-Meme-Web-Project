@@ -7,6 +7,7 @@ import * as endpoints from "../constants/endpoints";
 
 const MemeListComponent = () => {
   const [memes, setMemes] = useState(null);
+  const [memeChangedFlag, setMemeChangedFlag] = useState(false);
   const location = useLocation().pathname;
 
   useEffect(() => {
@@ -23,14 +24,21 @@ const MemeListComponent = () => {
         }
       });
       setMemes(filteredMemesList);
+      setMemeChangedFlag(false);
     });
-  }, [memes, location]);
+  }, [memeChangedFlag, location]);
 
   return (
     <div>
       {memes ? (
         memes.map((meme) => {
-          return <MemeCompontent key={meme.id} meme={meme}></MemeCompontent>;
+          return (
+            <MemeCompontent
+              key={meme.id}
+              meme={meme}
+              setMemeChangedFlag={setMemeChangedFlag}
+            ></MemeCompontent>
+          );
         })
       ) : (
         <p>Loading...</p>
