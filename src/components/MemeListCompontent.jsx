@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import { MemeCompontent } from "./MemeComponent";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import { MemeCompontent } from "./MemeComponent";
 import * as routesDeclaration from "../constants/routesDeclarations";
+import * as endpoints from "../constants/endpoints";
 
 const MemeListComponent = () => {
   const [memes, setMemes] = useState(null);
   const location = useLocation().pathname;
 
   useEffect(() => {
-    axios.get("http://localhost:3000/memes").then((response) => {
+    axios.get(endpoints.MEMES).then((response) => {
       const memesList = response.data;
       const filteredMemesList = memesList.filter((meme) => {
         if (

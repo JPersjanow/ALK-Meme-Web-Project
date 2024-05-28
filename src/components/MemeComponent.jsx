@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import * as endpoints from "../constants/endpoints";
 
 export function MemeCompontent({ meme }) {
   const [title, setTitle] = useState(meme.title);
@@ -30,10 +31,10 @@ export function MemeCompontent({ meme }) {
 
   const updateLikes = (type) => () => {
     axios
-      .get(`http://localhost:3000/memes/${meme.id}`)
+      .get(endpoints.MEME(meme.id))
       .then((response) => {
         const payload = updateStateAndReturnPayload(type, response);
-        return axios.put(`http://localhost:3000/memes/${meme.id}`, payload);
+        return axios.put(endpoints.MEME(meme.id), payload);
       })
       .then((response) => {
         console.log("Success:", response.data);
@@ -46,7 +47,7 @@ export function MemeCompontent({ meme }) {
   return (
     <div>
       <h1>{title}</h1>
-      <img src={img} alt="pic" />
+      <img src={img} alt={`Meme containing ${title}`} />
       <h2>{upvotes}</h2>
       <h2>{downvotes}</h2>
       <button onClick={updateLikes("upvotes")}>Upvote</button>
