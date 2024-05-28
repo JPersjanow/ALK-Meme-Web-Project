@@ -1,26 +1,47 @@
 import { useState } from "react";
 import axios from "axios";
 
-// start
 export function MemeCompontent({ meme }) {
   const [title, setTitle] = useState(meme.title);
   const [img, setImg] = useState(meme.img);
   const [upvotes, setUpvotes] = useState(meme.upvotes);
   const [downvotes, setDownvotes] = useState(meme.downvotes);
 
-  function updateData() {
-    const payload = { ...meme, upvotes: upvotes + 1 };
+  const updateStateAndReturnPayload = (type, response) => {
+    switch (type) {
+      case "upvotes":
+        setUpvotes(response.data.upvotes + 1);
+        return {
+          ...response.data,
+          upvotes: response.data.upvotes + 1,
+        };
+      case "downvotes":
+        setDownvotes(response.data.downvotes + 1);
+        return {
+          ...response.data,
+          downvotes: response.data.downvotes + 1,
+        };
+      default:
+        return {
+          ...response.data,
+        };
+    }
+  };
 
+  const updateLikes = (type) => () => {
     axios
-      .put(`http://localhost:3000/memes/${meme.id}`, payload)
+      .get(`http://localhost:3000/memes/${meme.id}`)
+      .then((response) => {
+        const payload = updateStateAndReturnPayload(type, response);
+        return axios.put(`http://localhost:3000/memes/${meme.id}`, payload);
+      })
       .then((response) => {
         console.log("Success:", response.data);
-        setUpvotes(upvotes + 1);
       })
       .catch((error) => {
         console.error("Error:", error);
       });
-  }
+  };
 
   return (
     <div>
@@ -28,7 +49,8 @@ export function MemeCompontent({ meme }) {
       <img src={img} alt="pic" />
       <h2>{upvotes}</h2>
       <h2>{downvotes}</h2>
-      <button onClick={updateData}>Upvote</button>
+      <button onClick={updateLikes("upvotes")}>Upvote</button>
+      <button onClick={updateLikes("downvotes")}>Downvote</button>
     </div>
   );
 }
