@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
-export function MemeCompontent({ meme }) {
+export function MemeCompontent({ meme, setMemeChangedFlag }) {
   const [title, setTitle] = useState(meme.title);
   const [img, setImg] = useState(meme.img);
   const [upvotes, setUpvotes] = useState(meme.upvotes);
@@ -42,6 +42,13 @@ export function MemeCompontent({ meme }) {
         console.error("Error:", error);
       });
   };
+
+  useEffect(() => {
+    if (upvotes - downvotes > 5 || downvotes > upvotes) {
+      console.log("change needed");
+      setMemeChangedFlag(true);
+    }
+  }, [upvotes, downvotes, setMemeChangedFlag]);
 
   return (
     <div>
