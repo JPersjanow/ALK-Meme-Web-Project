@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import imgPlaceholder from "../img-placeholder.png";
 import axios from "axios";
 import * as constants from "../constants/constants";
+import { useNavigate } from "react-router-dom";
 
 const MemeFormComponent = () => {
   const imageMimeType = /image\/(png|jpg|jpeg)/i;
@@ -10,6 +11,7 @@ const MemeFormComponent = () => {
   );
   const [file, setFile] = useState(null);
   const [img, setImg] = useState(imgPlaceholder);
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     setTitle(event.target.value);
@@ -35,7 +37,14 @@ const MemeFormComponent = () => {
       img: img,
       added_at: Date.now(),
     };
-    axios.post(constants.endpoints.MEMES, payload);
+    axios
+      .post(constants.endpoints.MEMES, payload)
+      .then((response) => {
+        navigate(constants.routes.REGULARPAGEROUTE);
+      })
+      .catch((error) => {
+        navigate(constants.routes.ERRORROUTE);
+      });
   };
 
   useEffect(() => {
