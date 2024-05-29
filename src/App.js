@@ -25,7 +25,10 @@ function App() {
               path={constants.routes.REGULARPAGEROUTE}
               element={<RegularPage></RegularPage>}
             ></Route>
-            <Route path="/*" element={<ErrorPage></ErrorPage>}></Route>
+            <Route
+              path={constants.routes.ERRORROUTE}
+              element={<ErrorPage></ErrorPage>}
+            ></Route>
           </Routes>
         </main>
       </BrowserRouter>
