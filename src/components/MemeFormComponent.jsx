@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import imgPlaceholder from "../img-placeholder.png";
-import axios from "axios";
-import * as constants from "../constants/constants";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import imgPlaceholder from "../img-placeholder.png";
+import * as constants from "../constants/constants";
 
 const MemeFormComponent = () => {
   const imageMimeType = /image\/(png|jpg|jpeg)/i;
@@ -72,7 +72,13 @@ const MemeFormComponent = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <input onChange={handleChange} placeholder="Meme Title"></input>
-        <input type="file" onChange={handleFileChange} />
+        <div>
+          <label for="memeUpload" class="btn">
+            Choose your Meme!
+          </label>
+          <br></br>
+          <input id="memeUpload" type="file" onChange={handleFileChange} />
+        </div>
         <button type="submit">Submit</button>
       </form>
       <div>
