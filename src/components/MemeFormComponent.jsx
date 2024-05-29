@@ -33,6 +33,7 @@ const MemeFormComponent = () => {
       upvotes: 0,
       downvotes: 0,
       img: img,
+      added_at: Date.now(),
     };
     axios.post(constants.endpoints.MEMES, payload);
   };
