@@ -10,6 +10,9 @@ export const NavComponent = () => {
         <li>
           <NavLink to="/regular">Regular</NavLink>
         </li>
+        <li>
+          <NavLink to="/add_meme">Add Meme</NavLink>
+        </li>
       </ul>
     </nav>
   );

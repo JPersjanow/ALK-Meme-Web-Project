@@ -3,6 +3,7 @@ import { NavComponent } from "./components/NavCompontent";
 import { HotPage } from "./pages/HotPage";
 import { RegularPage } from "./pages/RegularPage";
 import { ErrorPage } from "./pages/ErrorPage";
+import { AddMemePage } from "./pages/AddMemePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import * as constants from "./constants/constants";
 
@@ -24,6 +25,10 @@ function App() {
             <Route
               path={constants.routes.REGULARPAGEROUTE}
               element={<RegularPage></RegularPage>}
+            ></Route>
+            <Route
+              path="/add_meme"
+              element={<AddMemePage></AddMemePage>}
             ></Route>
             <Route path="/*" element={<ErrorPage></ErrorPage>}></Route>
           </Routes>
