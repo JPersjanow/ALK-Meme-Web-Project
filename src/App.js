@@ -30,7 +30,10 @@ function App() {
               path="/add_meme"
               element={<AddMemePage></AddMemePage>}
             ></Route>
-            <Route path="/*" element={<ErrorPage></ErrorPage>}></Route>
+            <Route
+              path={constants.routes.ERRORROUTE}
+              element={<ErrorPage></ErrorPage>}
+            ></Route>
           </Routes>
         </main>
       </BrowserRouter>
