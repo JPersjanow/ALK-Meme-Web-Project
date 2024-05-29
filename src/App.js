@@ -27,7 +27,7 @@ function App() {
               element={<RegularPage></RegularPage>}
             ></Route>
             <Route
-              path="/add_meme"
+              path={constants.routes.ADDMEMEPAGEROUTE}
               element={<AddMemePage></AddMemePage>}
             ></Route>
             <Route
