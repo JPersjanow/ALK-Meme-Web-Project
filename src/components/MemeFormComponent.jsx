@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import imgPlaceholder from "../img-placeholder.png";
-import * as constants from "../constants/constants";
+import * as constants from "../constants";
 
 const MemeFormComponent = () => {
   const imageMimeType = /image\/(png|jpg|jpeg)/i;
@@ -20,7 +20,7 @@ const MemeFormComponent = () => {
     if (event.target.files) {
       const file = event.target.files[0];
       if (!file.type.match(imageMimeType)) {
-        alert("Image mime type is not valid");
+        alert("We only accept png, jpg or jpeg!");
         return;
       }
       setFile(file);

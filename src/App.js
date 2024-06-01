@@ -5,7 +5,7 @@ import { RegularPage } from "./pages/RegularPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { AddMemePage } from "./pages/AddMemePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import * as constants from "./constants/constants";
+import * as constants from "./constants";
 
 function App() {
   return (

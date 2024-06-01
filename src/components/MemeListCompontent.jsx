@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { MemeCompontent } from "./MemeComponent";
-import * as constants from "../constants/constants";
+import * as constants from "../constants";
 
 const MemeListComponent = () => {
   const [memes, setMemes] = useState(null);
