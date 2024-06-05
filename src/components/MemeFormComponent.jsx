@@ -4,7 +4,7 @@ import axios from "axios";
 import imgPlaceholder from "../img-placeholder.png";
 import * as constants from "../constants";
 
-const MemeFormComponent = () => {
+export const MemeFormComponent = () => {
   const imageMimeType = /image\/(png|jpg|jpeg)/i;
   const [title, setTitle] = useState(
     "This will be your Meme Title! Start typing..."
@@ -16,6 +16,7 @@ const MemeFormComponent = () => {
   const handleChange = (event) => {
     setTitle(event.target.value);
   };
+
   const handleFileChange = (event) => {
     if (event.target.files) {
       const file = event.target.files[0];
@@ -88,5 +89,3 @@ const MemeFormComponent = () => {
     </div>
   );
 };
-
-export default MemeFormComponent;
