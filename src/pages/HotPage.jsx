@@ -1,11 +1,14 @@
 import { MemeListComponent } from "../components/MemeListComponent";
+import { BsFire } from "react-icons/bs";
 
 export const HotPage = () => {
   return (
     <div className="">
       <div className="titlepage bg-black ">
         <h2>Hot Page</h2>
-        <img src="/fire.png"></img>
+        <div className="title-page-icon">
+          <BsFire></BsFire>
+        </div>
       </div>
       <MemeListComponent></MemeListComponent>
     </div>

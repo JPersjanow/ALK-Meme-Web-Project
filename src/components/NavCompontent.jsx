@@ -1,19 +1,22 @@
 import { NavLink } from "react-router-dom";
 import * as constants from "../constants";
+import { BsFire } from "react-icons/bs";
+import { BiSolidHome } from "react-icons/bi";
+import { MdOutlineAddCircle } from "react-icons/md";
 
 export const NavComponent = () => {
   return (
     <nav className="navbar">
-      <img className="logo" src="/MEM-LOGO-WHITE.png" alt="logo" />
-      <ul>
-        <li>
-          <NavLink to={constants.routes.HOTPAGEROUTE}>Hot</NavLink>
+      <img className="navbar-logo" src="/MEM-LOGO-WHITE.png" alt="logo" />
+      <ul className="navbar-list">
+        <li className="navbar-list-hot">
+          <NavLink to={constants.routes.HOTPAGEROUTE}><BsFire></BsFire></NavLink>
         </li>
-        <li>
-          <NavLink to={constants.routes.REGULARPAGEROUTE}>Regular</NavLink>
+        <li className="navbar-list-regular">
+          <NavLink to={constants.routes.REGULARPAGEROUTE}><BiSolidHome></BiSolidHome></NavLink>
         </li>
-        <li>
-          <NavLink to={constants.routes.ADDMEMEPAGEROUTE}>Add Meme</NavLink>
+        <li className="navbar-list-add">
+          <NavLink to={constants.routes.ADDMEMEPAGEROUTE}><MdOutlineAddCircle></MdOutlineAddCircle></NavLink>
         </li>
       </ul>
     </nav>

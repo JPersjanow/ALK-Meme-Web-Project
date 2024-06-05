@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import * as constants from "../constants";
 import { ButtonLikeComponent } from "./ButtonLikeCompontent";
+import { AiOutlineLike } from "react-icons/ai";
+import { AiOutlineDislike } from "react-icons/ai";
 
 export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
   const [title, setTitle] = useState(meme.title);
@@ -64,11 +66,23 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
       <div className="containermem">
         <h1 className="titlemem">{title}</h1>
         <img src={img} alt={`Meme containing ${title}`} className="imgmem" />
-        <h2>{upvotes}</h2>
-        <h2>{downvotes}</h2>
-        <ButtonLikeComponent updateLikes={updateLikes} buttonText={"upvote"} updateLikeSwitch={"upvote"}></ButtonLikeComponent>
-        <ButtonLikeComponent updateLikes={updateLikes} buttonText={"downvote"} updateLikeSwitch={"downvote"}></ButtonLikeComponent>
- 
+
+        <div className="container-button-like">
+          <ButtonLikeComponent
+            updateLikes={updateLikes}
+            buttonText={<AiOutlineLike></AiOutlineLike>}
+            updateLikeSwitch={"upvote"}
+            buttonClass="button-upvote"
+            numberVotes={upvotes}
+          ></ButtonLikeComponent>
+          <ButtonLikeComponent
+            updateLikes={updateLikes}
+            buttonText={<AiOutlineDislike></AiOutlineDislike>}
+            updateLikeSwitch={"downvote"}
+            buttonClass="button-downvote"
+            numberVotes={downvotes}
+          ></ButtonLikeComponent>
+        </div>
       </div>
     </div>
   );
