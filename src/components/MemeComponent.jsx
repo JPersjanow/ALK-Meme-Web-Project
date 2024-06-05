@@ -4,7 +4,7 @@ import axios from "axios";
 import * as constants from "../constants";
 import { ButtonLikeComponent } from "./ButtonLikeCompontent";
 
-export function MemeCompontent({ meme, setMemeChangedFlag }) {
+export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
   const [title, setTitle] = useState(meme.title);
   const [img, setImg] = useState(meme.img);
   const [upvotes, setUpvotes] = useState(meme.upvotes);
@@ -72,4 +72,4 @@ export function MemeCompontent({ meme, setMemeChangedFlag }) {
       </div>
     </div>
   );
-}
+};

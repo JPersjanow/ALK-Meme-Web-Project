@@ -1,4 +1,4 @@
-import MemeListComponent from "../components/MemeListCompontent";
+import { MemeListComponent } from "../components/MemeListComponent";
 
 export const HotPage = () => {
   return (
@@ -10,4 +10,4 @@ export const HotPage = () => {
       <MemeListComponent></MemeListComponent>
     </div>
   );
-}; 
+};

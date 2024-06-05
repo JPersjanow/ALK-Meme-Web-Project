@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import { MemeCompontent } from "./MemeComponent";
+import { MemeComponent } from "./MemeComponent";
+import { SortButtonComponent } from "./SortButtonComponent";
 import * as constants from "../constants";
 
-const MemeListComponent = () => {
+export const MemeListComponent = () => {
   const [memes, setMemes] = useState(null);
   const [memeChangedFlag, setMemeChangedFlag] = useState(false);
   const location = useLocation().pathname;
@@ -48,17 +49,18 @@ const MemeListComponent = () => {
 
   return (
     <div>
-      <button onClick={handleSortClick}>
-        {sort ? "Show newest" : "Show oldest"}
-      </button>
+      <SortButtonComponent
+        sortState={sort}
+        handleFunction={handleSortClick}
+      ></SortButtonComponent>
       {memes ? (
         memes.map((meme) => {
           return (
-            <MemeCompontent
+            <MemeComponent
               key={meme.id}
               meme={meme}
               setMemeChangedFlag={setMemeChangedFlag}
-            ></MemeCompontent>
+            ></MemeComponent>
           );
         })
       ) : (
@@ -67,5 +69,3 @@ const MemeListComponent = () => {
     </div>
   );
 };
-
-export default MemeListComponent;

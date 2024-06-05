@@ -1,4 +1,4 @@
-import MemeFormComponent from "../components/MemeFormComponent";
+import { MemeFormComponent } from "../components/MemeFormComponent";
 
 export const AddMemePage = () => {
   return (
