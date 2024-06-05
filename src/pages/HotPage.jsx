@@ -1,10 +1,13 @@
 import MemeListComponent from "../components/MemeListCompontent";
 
 export const HotPage = () => {
-    return (
-        <div>
-          <h2>Hot Page</h2>
-          <MemeListComponent></MemeListComponent>
-        </div>
-      );
-}
+  return (
+    <div className="">
+      <div className="titlepage bg-black ">
+        <h2>Hot Page</h2>
+        <img src="/fire.png"></img>
+      </div>
+      <MemeListComponent></MemeListComponent>
+    </div>
+  );
+}; 
