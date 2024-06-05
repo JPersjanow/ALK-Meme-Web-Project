@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import * as constants from "../constants";
 
-export function MemeCompontent({ meme, setMemeChangedFlag }) {
+export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
   const [title, setTitle] = useState(meme.title);
   const [img, setImg] = useState(meme.img);
   const [upvotes, setUpvotes] = useState(meme.upvotes);
@@ -68,4 +68,4 @@ export function MemeCompontent({ meme, setMemeChangedFlag }) {
       <button onClick={updateLikes("downvotes")}>Downvote</button>
     </div>
   );
-}
+};
