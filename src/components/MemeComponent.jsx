@@ -59,13 +59,15 @@ export function MemeCompontent({ meme, setMemeChangedFlag }) {
   }, [upvotes, downvotes, setMemeChangedFlag, location]);
 
   return (
-    <div>
-      <h1>{title}</h1>
-      <img src={img} alt={`Meme containing ${title}`} />
-      <h2>{upvotes}</h2>
-      <h2>{downvotes}</h2>
-      <button onClick={updateLikes("upvotes")}>Upvote</button>
-      <button onClick={updateLikes("downvotes")}>Downvote</button>
+    <div className="">
+      <div className="containermem">
+        <h1 className="titlemem">{title}</h1>
+        <img src={img} alt={`Meme containing ${title}`} className="imgmem"/>
+        <h2>{upvotes}</h2>
+        <h2>{downvotes}</h2>
+        <button onClick={updateLikes("upvotes")}>Upvote</button>
+        <button onClick={updateLikes("downvotes")}>Downvote</button>
+      </div>
     </div>
   );
 }
