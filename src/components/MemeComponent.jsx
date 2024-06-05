@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import * as constants from "../constants";
+import { ButtonLikeComponent } from "./ButtonLikeCompontent";
 
 export function MemeCompontent({ meme, setMemeChangedFlag }) {
   const [title, setTitle] = useState(meme.title);
@@ -12,13 +13,13 @@ export function MemeCompontent({ meme, setMemeChangedFlag }) {
 
   const updateStateAndReturnPayload = (type, response) => {
     switch (type) {
-      case "upvotes":
+      case "upvote":
         setUpvotes(response.data.upvotes + 1);
         return {
           ...response.data,
           upvotes: response.data.upvotes + 1,
         };
-      case "downvotes":
+      case "downvote":
         setDownvotes(response.data.downvotes + 1);
         return {
           ...response.data,
@@ -62,11 +63,12 @@ export function MemeCompontent({ meme, setMemeChangedFlag }) {
     <div className="">
       <div className="containermem">
         <h1 className="titlemem">{title}</h1>
-        <img src={img} alt={`Meme containing ${title}`} className="imgmem"/>
+        <img src={img} alt={`Meme containing ${title}`} className="imgmem" />
         <h2>{upvotes}</h2>
         <h2>{downvotes}</h2>
-        <button onClick={updateLikes("upvotes")}>Upvote</button>
-        <button onClick={updateLikes("downvotes")}>Downvote</button>
+        <ButtonLikeComponent updateLikes={updateLikes} buttonText={"upvote"} updateLikeSwitch={"upvote"}></ButtonLikeComponent>
+        <ButtonLikeComponent updateLikes={updateLikes} buttonText={"downvote"} updateLikeSwitch={"downvote"}></ButtonLikeComponent>
+ 
       </div>
     </div>
   );

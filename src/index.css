@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  
+}
 
 body {
   margin: 0;
@@ -31,7 +34,7 @@ code {
 
 .navbar ul {
   display: flex;
-  justify-content: flex-end
+  justify-content: flex-end;
 }
 
 .navbar li {
@@ -45,13 +48,12 @@ code {
 .logo {
   width: 120px;
   height: auto;
-  
 }
 
 /* tiile page */
 
 .titlepage {
-  width: 800px;
+  width: 40%;
   margin: 0 auto;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -60,14 +62,12 @@ code {
   justify-content: center;
   box-shadow: 10px 5px 5px red;
   margin-bottom: 32px;
-  
 }
 
 .titlepage h2 {
   font-size: 40px;
   color: white;
   margin-right: 8px;
-
 }
 
 .titlepage img {
@@ -75,13 +75,12 @@ code {
   width: 50px;
 }
 
-
 /* MemeCompontent */
 
 .containermem {
   background-color: black;
   margin-bottom: 16px;
-  width: 800px;
+  width: 40%;
   margin: 0 auto;
   padding-top: 16px;
   margin-bottom: 32px;
