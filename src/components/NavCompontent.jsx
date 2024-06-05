@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import * as constants from "../constants/constants";
+import * as constants from "../constants";
 
 export const NavComponent = () => {
   return (
@@ -10,6 +10,9 @@ export const NavComponent = () => {
         </li>
         <li>
           <NavLink to={constants.routes.REGULARPAGEROUTE}>Regular</NavLink>
+        </li>
+        <li>
+          <NavLink to={constants.routes.ADDMEMEPAGEROUTE}>Add Meme</NavLink>
         </li>
       </ul>
     </nav>

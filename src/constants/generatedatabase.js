@@ -40,6 +40,7 @@ for (let i = 0; i < 50; i++) {
     upvotes: 0,
     downvotes: 0,
     img: pathmem[i],
+    added_at: Date.now() + i,
   });
 }
 

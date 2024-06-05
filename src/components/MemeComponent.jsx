@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import * as constants from "../constants/constants";
+import * as constants from "../constants";
 
 export function MemeCompontent({ meme, setMemeChangedFlag }) {
   const [title, setTitle] = useState(meme.title);

@@ -1,354 +1,404 @@
 {
   "memes": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Mem 1",
-      "upvotes": 0,
+      "upvotes": 6,
       "downvotes": 0,
-      "img": "/memes/1mem.jpeg"
+      "img": "/memes/1mem.jpeg",
+      "added_at": 1716990905700
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Mem 2",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/2mem.jpeg"
+      "img": "/memes/2mem.jpeg",
+      "added_at": 1716990905701
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Mem 3",
-      "upvotes": 0,
+      "upvotes": 6,
       "downvotes": 0,
-      "img": "/memes/3mem.jpeg"
+      "img": "/memes/3mem.jpeg",
+      "added_at": 1716990905702
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Mem 4",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/4mem.jpeg"
+      "img": "/memes/4mem.jpeg",
+      "added_at": 1716990905703
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Mem 5",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/5mem.jpeg"
+      "img": "/memes/5mem.jpeg",
+      "added_at": 1716990905704
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Mem 6",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/6mem.jpeg"
+      "img": "/memes/6mem.jpeg",
+      "added_at": 1716990905705
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Mem 7",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/7mem.jpeg"
+      "img": "/memes/7mem.jpeg",
+      "added_at": 1716990905706
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Mem 8",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/8mem.jpeg"
+      "img": "/memes/8mem.jpeg",
+      "added_at": 1716990905707
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Mem 9",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/9mem.jpeg"
+      "img": "/memes/9mem.jpeg",
+      "added_at": 1716990905708
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Mem 10",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/10mem.jpeg"
+      "img": "/memes/10mem.jpeg",
+      "added_at": 1716990905709
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Mem 11",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/11mem.jpeg"
+      "img": "/memes/11mem.jpeg",
+      "added_at": 1716990905710
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Mem 12",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/12mem.jpeg"
+      "img": "/memes/12mem.jpeg",
+      "added_at": 1716990905711
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Mem 13",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/13mem.jpeg"
+      "img": "/memes/13mem.jpeg",
+      "added_at": 1716990905712
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Mem 14",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/14mem.jpeg"
+      "img": "/memes/14mem.jpeg",
+      "added_at": 1716990905713
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Mem 15",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/15mem.jpeg"
+      "img": "/memes/15mem.jpeg",
+      "added_at": 1716990905714
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Mem 16",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/16mem.jpeg"
+      "img": "/memes/16mem.jpeg",
+      "added_at": 1716990905715
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Mem 17",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/17mem.jpeg"
+      "img": "/memes/17mem.jpeg",
+      "added_at": 1716990905716
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "Mem 18",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/18mem.jpeg"
+      "img": "/memes/18mem.jpeg",
+      "added_at": 1716990905717
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "Mem 19",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/19mem.jpeg"
+      "img": "/memes/19mem.jpeg",
+      "added_at": 1716990905718
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "Mem 20",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/20mem.jpeg"
+      "img": "/memes/20mem.jpeg",
+      "added_at": 1716990905719
     },
     {
-      "id": 21,
+      "id": "21",
       "title": "Mem 21",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/21mem.jpeg"
+      "img": "/memes/21mem.jpeg",
+      "added_at": 1716990905720
     },
     {
-      "id": 22,
+      "id": "22",
       "title": "Mem 22",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/22mem.jpeg"
+      "img": "/memes/22mem.jpeg",
+      "added_at": 1716990905721
     },
     {
-      "id": 23,
+      "id": "23",
       "title": "Mem 23",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/23mem.jpeg"
+      "img": "/memes/23mem.jpeg",
+      "added_at": 1716990905722
     },
     {
-      "id": 24,
+      "id": "24",
       "title": "Mem 24",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/24mem.jpeg"
+      "img": "/memes/24mem.jpeg",
+      "added_at": 1716990905723
     },
     {
-      "id": 25,
+      "id": "25",
       "title": "Mem 25",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/25mem.jpeg"
+      "img": "/memes/25mem.jpeg",
+      "added_at": 1716990905724
     },
     {
-      "id": 26,
+      "id": "26",
       "title": "Mem 26",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/26mem.jpeg"
+      "img": "/memes/26mem.jpeg",
+      "added_at": 1716990905725
     },
     {
-      "id": 27,
+      "id": "27",
       "title": "Mem 27",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/27mem.jpeg"
+      "img": "/memes/27mem.jpeg",
+      "added_at": 1716990905726
     },
     {
-      "id": 28,
+      "id": "28",
       "title": "Mem 28",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/28mem.jpeg"
+      "img": "/memes/28mem.jpeg",
+      "added_at": 1716990905727
     },
     {
-      "id": 29,
+      "id": "29",
       "title": "Mem 29",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/29mem.jpeg"
+      "img": "/memes/29mem.jpeg",
+      "added_at": 1716990905728
     },
     {
-      "id": 30,
+      "id": "30",
       "title": "Mem 30",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/30mem.jpeg"
+      "img": "/memes/30mem.jpeg",
+      "added_at": 1716990905729
     },
     {
-      "id": 31,
+      "id": "31",
       "title": "Mem 31",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/31mem.jpeg"
+      "img": "/memes/31mem.jpeg",
+      "added_at": 1716990905730
     },
     {
-      "id": 32,
+      "id": "32",
       "title": "Mem 32",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/32mem.jpeg"
+      "img": "/memes/32mem.jpeg",
+      "added_at": 1716990905731
     },
     {
-      "id": 33,
+      "id": "33",
       "title": "Mem 33",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/33mem.jpeg"
+      "img": "/memes/33mem.jpeg",
+      "added_at": 1716990905732
     },
     {
-      "id": 34,
+      "id": "34",
       "title": "Mem 34",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/34mem.jpeg"
+      "img": "/memes/34mem.jpeg",
+      "added_at": 1716990905733
     },
     {
-      "id": 35,
+      "id": "35",
       "title": "Mem 35",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/35mem.jpeg"
+      "img": "/memes/35mem.jpeg",
+      "added_at": 1716990905734
     },
     {
-      "id": 36,
+      "id": "36",
       "title": "Mem 36",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/36mem.jpeg"
+      "img": "/memes/36mem.jpeg",
+      "added_at": 1716990905735
     },
     {
-      "id": 37,
+      "id": "37",
       "title": "Mem 37",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/37mem.jpeg"
+      "img": "/memes/37mem.jpeg",
+      "added_at": 1716990905736
     },
     {
-      "id": 38,
+      "id": "38",
       "title": "Mem 38",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/38mem.jpeg"
+      "img": "/memes/38mem.jpeg",
+      "added_at": 1716990905737
     },
     {
-      "id": 39,
+      "id": "39",
       "title": "Mem 39",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/39mem.jpeg"
+      "img": "/memes/39mem.jpeg",
+      "added_at": 1716990905738
     },
     {
-      "id": 40,
+      "id": "40",
       "title": "Mem 40",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/40mem.jpeg"
+      "img": "/memes/40mem.jpeg",
+      "added_at": 1716990905739
     },
     {
-      "id": 41,
+      "id": "41",
       "title": "Mem 41",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/41mem.jpeg"
+      "img": "/memes/41mem.jpeg",
+      "added_at": 1716990905740
     },
     {
-      "id": 42,
+      "id": "42",
       "title": "Mem 42",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/42mem.jpeg"
+      "img": "/memes/42mem.jpeg",
+      "added_at": 1716990905741
     },
     {
-      "id": 43,
+      "id": "43",
       "title": "Mem 43",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/43mem.jpeg"
+      "img": "/memes/43mem.jpeg",
+      "added_at": 1716990905742
     },
     {
-      "id": 44,
+      "id": "44",
       "title": "Mem 44",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/44mem.jpeg"
+      "img": "/memes/44mem.jpeg",
+      "added_at": 1716990905743
     },
     {
-      "id": 45,
+      "id": "45",
       "title": "Mem 45",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/45mem.jpeg"
+      "img": "/memes/45mem.jpeg",
+      "added_at": 1716990905744
     },
     {
-      "id": 46,
+      "id": "46",
       "title": "Mem 46",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/46mem.jpeg"
+      "img": "/memes/46mem.jpeg",
+      "added_at": 1716990905745
     },
     {
-      "id": 47,
+      "id": "47",
       "title": "Mem 47",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/47mem.jpeg"
+      "img": "/memes/47mem.jpeg",
+      "added_at": 1716990905746
     },
     {
-      "id": 48,
+      "id": "48",
       "title": "Mem 48",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/48mem.jpeg"
+      "img": "/memes/48mem.jpeg",
+      "added_at": 1716990905747
     },
     {
-      "id": 49,
+      "id": "49",
       "title": "Mem 49",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/49mem.jpeg"
+      "img": "/memes/49mem.jpeg",
+      "added_at": 1716990905748
     },
     {
-      "id": 50,
+      "id": "50",
       "title": "Mem 50",
       "upvotes": 0,
       "downvotes": 0,
-      "img": "/memes/50mem.jpeg"
+      "img": "/memes/50mem.jpeg",
+      "added_at": 1716990905749
     }
   ]
 }

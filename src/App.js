@@ -3,8 +3,9 @@ import { NavComponent } from "./components/NavCompontent";
 import { HotPage } from "./pages/HotPage";
 import { RegularPage } from "./pages/RegularPage";
 import { ErrorPage } from "./pages/ErrorPage";
+import { AddMemePage } from "./pages/AddMemePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import * as constants from "./constants/constants";
+import * as constants from "./constants";
 
 function App() {
   return (
@@ -24,6 +25,10 @@ function App() {
             <Route
               path={constants.routes.REGULARPAGEROUTE}
               element={<RegularPage></RegularPage>}
+            ></Route>
+            <Route
+              path={constants.routes.ADDMEMEPAGEROUTE}
+              element={<AddMemePage></AddMemePage>}
             ></Route>
             <Route
               path={constants.routes.ERRORROUTE}
