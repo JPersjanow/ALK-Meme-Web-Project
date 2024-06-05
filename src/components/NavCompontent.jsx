@@ -4,6 +4,7 @@ import * as constants from "../constants";
 export const NavComponent = () => {
   return (
     <nav className="navbar">
+      <img className="logo" src="/MEM-LOGO-WHITE.png" alt="logo" />
       <ul>
         <li>
           <NavLink to={constants.routes.HOTPAGEROUTE}>Hot</NavLink>

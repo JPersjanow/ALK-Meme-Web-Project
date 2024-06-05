@@ -3,8 +3,8 @@
     {
       "id": "1",
       "title": "Mem 1",
-      "upvotes": 6,
-      "downvotes": 0,
+      "upvotes": 9,
+      "downvotes": 4,
       "img": "/memes/1mem.jpeg",
       "added_at": 1716990905700
     },
@@ -20,7 +20,7 @@
       "id": "3",
       "title": "Mem 3",
       "upvotes": 6,
-      "downvotes": 0,
+      "downvotes": 1,
       "img": "/memes/3mem.jpeg",
       "added_at": 1716990905702
     },
@@ -347,31 +347,31 @@
     {
       "id": "44",
       "title": "Mem 44",
-      "upvotes": 0,
-      "downvotes": 0,
+      "upvotes": 11,
+      "downvotes": 12,
       "img": "/memes/44mem.jpeg",
       "added_at": 1716990905743
     },
     {
       "id": "45",
       "title": "Mem 45",
-      "upvotes": 0,
-      "downvotes": 0,
+      "upvotes": 6,
+      "downvotes": 3,
       "img": "/memes/45mem.jpeg",
       "added_at": 1716990905744
     },
     {
       "id": "46",
       "title": "Mem 46",
-      "upvotes": 0,
-      "downvotes": 0,
+      "upvotes": 20,
+      "downvotes": 14,
       "img": "/memes/46mem.jpeg",
       "added_at": 1716990905745
     },
     {
       "id": "47",
       "title": "Mem 47",
-      "upvotes": 0,
+      "upvotes": 6,
       "downvotes": 0,
       "img": "/memes/47mem.jpeg",
       "added_at": 1716990905746
@@ -379,15 +379,15 @@
     {
       "id": "48",
       "title": "Mem 48",
-      "upvotes": 0,
-      "downvotes": 0,
+      "upvotes": 23,
+      "downvotes": 17,
       "img": "/memes/48mem.jpeg",
       "added_at": 1716990905747
     },
     {
       "id": "49",
       "title": "Mem 49",
-      "upvotes": 0,
+      "upvotes": 6,
       "downvotes": 0,
       "img": "/memes/49mem.jpeg",
       "added_at": 1716990905748
@@ -395,8 +395,8 @@
     {
       "id": "50",
       "title": "Mem 50",
-      "upvotes": 0,
-      "downvotes": 0,
+      "upvotes": 9,
+      "downvotes": 3,
       "img": "/memes/50mem.jpeg",
       "added_at": 1716990905749
     }
