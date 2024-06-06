@@ -22,7 +22,7 @@
   }
 
   .title-page-icon {
-    @apply text-red-600 text-[50px];
+    @apply text-[50px];
   }
 
   /* NavComponent */

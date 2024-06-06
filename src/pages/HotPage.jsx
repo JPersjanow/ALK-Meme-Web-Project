@@ -6,7 +6,7 @@ export const HotPage = () => {
     <div className="">
       <div className="titlepage">
         <h2>Hot Page</h2>
-        <div className="title-page-icon">
+        <div className="title-page-icon text-red-500">
           <BsFire></BsFire>
         </div>
       </div>
