@@ -18,6 +18,9 @@ export const NavComponent = () => {
         <li className="navbar-list-add">
           <NavLink to={constants.routes.ADDMEMEPAGEROUTE}><MdOutlineAddCircle></MdOutlineAddCircle></NavLink>
         </li>
+        <li className="navbar-list-contact">
+          <NavLink to={constants.routes.CONTACTPAGE}><MdOutlineAddCircle></MdOutlineAddCircle></NavLink>
+        </li>
       </ul>
     </nav>
   );
