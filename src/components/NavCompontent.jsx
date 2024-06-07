@@ -3,6 +3,7 @@ import * as constants from "../constants";
 import { BsFire } from "react-icons/bs";
 import { BiSolidHome } from "react-icons/bi";
 import { MdOutlineAddCircle } from "react-icons/md";
+import { MdOutlineContactSupport } from "react-icons/md";
 
 export const NavComponent = () => {
   return (
@@ -19,7 +20,7 @@ export const NavComponent = () => {
           <NavLink to={constants.routes.ADDMEMEPAGEROUTE}><MdOutlineAddCircle></MdOutlineAddCircle></NavLink>
         </li>
         <li className="navbar-list-contact">
-          <NavLink to={constants.routes.CONTACTPAGE}><MdOutlineAddCircle></MdOutlineAddCircle></NavLink>
+          <NavLink to={constants.routes.CONTACTPAGE}><MdOutlineContactSupport></MdOutlineContactSupport></NavLink>
         </li>
       </ul>
     </nav>
