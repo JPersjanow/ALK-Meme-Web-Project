@@ -3,11 +3,12 @@ import { MdOutlineContactSupport } from "react-icons/md";
 
 export const ContactPage = () => {
   return (
-    <div>
+    <div className="">
       <div className="titlepage">
         <h2>Kontakt z nami</h2>
-        <div className="title-page-icon text-orange-500"><MdOutlineContactSupport>
-        </MdOutlineContactSupport></div>
+        <div className="title-page-icon text-orange-500">
+          <MdOutlineContactSupport></MdOutlineContactSupport>
+        </div>
       </div>
       <div className="container-person-module">
         <ContactComponent
