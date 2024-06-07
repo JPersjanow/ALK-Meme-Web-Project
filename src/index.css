@@ -100,7 +100,30 @@
 
   /* MemeFormCompontent */
 
+  .add-mem-container {
+    @apply font-bold mt-10
+  }
 
+  .add-mem-form-container {
+    @apply shadow-2xl py-4 px-4 
+  }
+
+  .add-mem-container {
+
+    @apply flex w-3/4 mx-auto justify-center gap-8 text-left 
+  }
+
+  .add-mem-form-input {
+    @apply w-full border border-black mb-4 
+  }
+
+  .add-mem-form-choose input {
+    @apply my-2
+  }
+
+  .add-mem-form button {
+    @apply my-2 bg-red-500 px-5 py-2 rounded-lg
+  }
 
  
 }

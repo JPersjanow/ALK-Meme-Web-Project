@@ -70,21 +70,27 @@ export const MemeFormComponent = () => {
   }, [file]);
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input onChange={handleChange} placeholder="Meme Title"></input>
-        <div>
-          <label for="memeUpload" class="btn">
-            Choose your Meme!
-          </label>
-          <br></br>
-          <input id="memeUpload" type="file" onChange={handleFileChange} />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-      <div>
+    <div className="add-mem-container">
+      
+      <div className="add-mem-img">
         <h2>{title}</h2>
         <img src={img} alt={`Meme containing ${title}`} />
+      </div>
+      <div className="add-mem-form-container">
+        <form onSubmit={handleSubmit} className="add-mem-form">
+          <label >
+            Mem Title
+          </label>
+          <input className="add-mem-form-input" onChange={handleChange} placeholder=""></input>
+          <div className="add-mem-form-choose">
+            <label for="memeUpload" class="btn">
+              Choose your Meme!
+            </label>
+            <br></br>
+            <input id="memeUpload" type="file" onChange={handleFileChange} />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
   );
