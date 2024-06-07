@@ -85,7 +85,7 @@
   }
 
   .person-module a {
-    @apply text-5xl text-blue-900
+    @apply text-5xl text-blue-900 mb-4
   }
 
   .person-module h2 {
@@ -97,6 +97,9 @@
   .container-person-module {
     @apply flex w-3/4 mx-auto justify-center gap-4
   }
+
+  /* MemeFormCompontent */
+
 
 
  
