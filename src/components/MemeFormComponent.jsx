@@ -71,7 +71,6 @@ export const MemeFormComponent = () => {
 
   return (
     <div className="add-mem-container">
-      
       <div className="add-mem-img">
         <h2>{title}</h2>
         <img src={img} alt={`Meme containing ${title}`} />
