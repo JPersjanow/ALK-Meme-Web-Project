@@ -66,7 +66,6 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
       <div className="containermem">
         <h1 className="titlemem">{title}</h1>
         <img src={img} alt={`Meme containing ${title}`} className="imgmem" />
-
         <div className="container-button-like">
           <ButtonLikeComponent
             updateLikes={updateLikes}
