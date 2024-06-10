@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import * as constants from "../constants";
+import { ButtonLikeComponent } from "./ButtonLikeCompontent";
+import { AiOutlineLike } from "react-icons/ai";
+import { AiOutlineDislike } from "react-icons/ai";
 
 export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
   const [title, setTitle] = useState(meme.title);
@@ -12,13 +15,13 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
 
   const updateStateAndReturnPayload = (type, response) => {
     switch (type) {
-      case "upvotes":
+      case "upvote":
         setUpvotes(response.data.upvotes + 1);
         return {
           ...response.data,
           upvotes: response.data.upvotes + 1,
         };
-      case "downvotes":
+      case "downvote":
         setDownvotes(response.data.downvotes + 1);
         return {
           ...response.data,
@@ -59,13 +62,27 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
   }, [upvotes, downvotes, setMemeChangedFlag, location]);
 
   return (
-    <div>
-      <h1>{title}</h1>
-      <img src={img} alt={`Meme containing ${title}`} />
-      <h2>{upvotes}</h2>
-      <h2>{downvotes}</h2>
-      <button onClick={updateLikes("upvotes")}>Upvote</button>
-      <button onClick={updateLikes("downvotes")}>Downvote</button>
+    <div className="">
+      <div className="containermem">
+        <h1 className="titlemem">{title}</h1>
+        <img src={img} alt={`Meme containing ${title}`} className="imgmem" />
+        <div className="container-button-like">
+          <ButtonLikeComponent
+            updateLikes={updateLikes}
+            buttonText={<AiOutlineLike></AiOutlineLike>}
+            updateLikeSwitch={"upvote"}
+            buttonClass="button-upvote"
+            numberVotes={upvotes}
+          ></ButtonLikeComponent>
+          <ButtonLikeComponent
+            updateLikes={updateLikes}
+            buttonText={<AiOutlineDislike></AiOutlineDislike>}
+            updateLikeSwitch={"downvote"}
+            buttonClass="button-downvote"
+            numberVotes={downvotes}
+          ></ButtonLikeComponent>
+        </div>
+      </div>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { HotPage } from "./pages/HotPage";
 import { RegularPage } from "./pages/RegularPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { AddMemePage } from "./pages/AddMemePage";
+import { ContactPage } from "./pages/ContactPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import * as constants from "./constants";
 
@@ -33,6 +34,10 @@ function App() {
             <Route
               path={constants.routes.ERRORROUTE}
               element={<ErrorPage></ErrorPage>}
+            ></Route>
+            <Route
+              path={constants.routes.CONTACTPAGE}
+              element={<ContactPage></ContactPage>}
             ></Route>
           </Routes>
         </main>
