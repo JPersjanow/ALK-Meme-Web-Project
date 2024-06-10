@@ -3,10 +3,10 @@ import { MdOutlineContactSupport } from "react-icons/md";
 
 export const ContactPage = () => {
   return (
-    <div className="">
-      <div className="titlepage">
+    <div>
+      <div className="title-header--orange-shadow">
         <h2>Kontakt z nami</h2>
-        <div className="title-page-icon text-orange-500">
+        <div className="title-header-icon text-orange-500">
           <MdOutlineContactSupport></MdOutlineContactSupport>
         </div>
       </div>

@@ -1,12 +1,16 @@
 import { MemeListComponent } from "../components/MemeListComponent";
 import { BsFire } from "react-icons/bs";
+import MemeBackground from "../assets/meme-background.png";
 
 export const HotPage = () => {
   return (
-    <div className="bg-[url('https://merkuriusz.pl/wp-content/uploads/2024/06/membgc.png')] bg-repeat">
-      <div className="titlepage">
+    <div
+      className="background"
+      style={{ backgroundImage: `url(${MemeBackground})` }}
+    >
+      <div className="title-header--red-shadow">
         <h2>Hot Page</h2>
-        <div className="title-page-icon text-red-500">
+        <div className="title-header-icon text-red-500">
           <BsFire></BsFire>
         </div>
       </div>

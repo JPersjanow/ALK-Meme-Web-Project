@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import imgPlaceholder from "../img-placeholder.png";
+import imgPlaceholder from "../assets/img-placeholder.png";
 import * as constants from "../constants";
 
 export const MemeFormComponent = () => {
   const imageMimeType = /image\/(png|jpg|jpeg)/i;
   const [title, setTitle] = useState(
-    "This will be your Meme Title! Start typing..."
+    "This will be your Meme Title, start typing..."
   );
   const [file, setFile] = useState(null);
   const [img, setImg] = useState(imgPlaceholder);
@@ -70,22 +70,30 @@ export const MemeFormComponent = () => {
   }, [file]);
 
   return (
-    <div className="add-mem-container">
-      <div className="add-mem-img">
-        <h2>{title}</h2>
+    <div className="add-meme-container">
+      <div className="meme-container--no-margin">
+        <h1 className="meme-title--small">{title}</h1>
         <img src={img} alt={`Meme containing ${title}`} />
+        <br></br>
+        <h1 className="meme-title--small">Hilarious!</h1>
       </div>
-      <div className="add-mem-form-container">
-        <form onSubmit={handleSubmit} className="add-mem-form">
-          <label >
-            Mem Title
-          </label>
-          <input className="add-mem-form-input" onChange={handleChange} placeholder=""></input>
-          <div className="add-mem-form-choose">
-            <label for="memeUpload" class="btn">
+      <div className="add-meme-form-container">
+        <form onSubmit={handleSubmit} className="add-meme-form">
+          <div class="add-meme-form-input-container">
+            <label class="add-meme-form-label" for="memeUploadTitle">
+              Meme Title
+            </label>
+            <input
+              id="memeUploadTitle"
+              className="add-meme-form-input"
+              onChange={handleChange}
+              placeholder=""
+            ></input>
+          </div>
+          <div className="add-meme-form-input-container">
+            <label for="memeUpload" class="add-meme-form-label">
               Choose your Meme!
             </label>
-            <br></br>
             <input id="memeUpload" type="file" onChange={handleFileChange} />
           </div>
           <button type="submit">Submit</button>

@@ -1,0 +1,11 @@
+.person-module {
+  @apply flex flex-col w-2/12 items-center mx-4 box-border shadow-md;
+}
+
+.person-module a {
+  @apply text-5xl text-blue-900 mb-4;
+}
+
+.person-module h2 {
+  @apply text-base my-4;
+}

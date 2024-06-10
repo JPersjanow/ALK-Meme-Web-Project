@@ -1,0 +1,17 @@
+.button {
+  &-like {
+    @apply mx-2 px-2 rounded-md text-white my-3 transition-all duration-500 ease-linear font-bold;
+  }
+
+  &-upvote {
+    @apply bg-green-800 hover:bg-green-500;
+  }
+
+  &-downvote {
+    @apply bg-red-800 hover:bg-red-500;
+  }
+}
+
+.container-like {
+  @apply flex gap-4 items-center;
+}
