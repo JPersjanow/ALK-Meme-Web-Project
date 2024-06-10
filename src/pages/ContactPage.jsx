@@ -5,7 +5,7 @@ export const ContactPage = () => {
   return (
     <div>
       <div className="title-header--orange-shadow">
-        <h2>Kontakt z nami</h2>
+        <h2>Meet the creators</h2>
         <div className="title-header-icon text-orange-500">
           <MdOutlineContactSupport></MdOutlineContactSupport>
         </div>

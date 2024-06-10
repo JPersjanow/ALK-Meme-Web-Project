@@ -9,7 +9,7 @@ export const HotPage = () => {
       style={{ backgroundImage: `url(${MemeBackground})` }}
     >
       <div className="title-header--red-shadow">
-        <h2>Hot Page</h2>
+        <h2>Hottest Memes in town!</h2>
         <div className="title-header-icon text-red-500">
           <BsFire></BsFire>
         </div>
