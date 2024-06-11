@@ -1,6 +1,10 @@
 .meme {
+  &-list-container {
+    @apply flex flex-col items-center;
+  }
+
   &-title {
-    @apply mb-4 text-white font-bold;
+    @apply mb-4 text-white font-bold text-center;
 
     &--small {
       @extend .meme-title;
@@ -8,7 +12,7 @@
     }
   }
   &-container {
-    @apply flex flex-col items-center bg-slate-800 mb-4 w-[40%] m-0 m-auto pt-4 mb-8 rounded-md;
+    @apply flex flex-col items-center bg-slate-800 mb-4 w-[40rem] pt-4 mb-8 rounded-md;
 
     &--no-margin {
       @extend .meme-container;
@@ -16,7 +20,7 @@
     }
 
     img {
-      @apply m-0 m-auto h-auto w-[90%] border-red-800 border-solid border-8;
+      @apply m-0 m-auto h-auto w-[80%] border-red-800 border-solid border-8;
     }
   }
 }
