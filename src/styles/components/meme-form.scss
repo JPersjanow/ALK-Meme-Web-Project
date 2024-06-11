@@ -6,8 +6,10 @@
   }
 
   &-form {
+    @apply flex flex-col items-center;
+
     &-container {
-      @apply border-2 border-blue-600 py-4 px-4 rounded-md;
+      @apply border-2 border-slate-600 py-4 px-4 rounded-md;
     }
 
     &-input {
@@ -28,13 +30,19 @@
         @apply mb-2 text-xl;
       }
     }
+  }
+}
+.file-upload {
+  @apply flex flex-col items-center text-center border-dashed border-2 border-blue-600 p-6 relative cursor-pointer;
 
-    button {
-      @apply my-2 bg-slate-200 px-5 py-2 rounded-lg shadow-sm shadow-slate-600;
+  svg {
+    @apply text-blue-600;
+  }
+  p {
+    @apply mt-3.5 mt-3;
+  }
 
-      &:hover {
-        @apply bg-blue-600 ease-in-out;
-      }
-    }
+  input {
+    @apply block h-max w-max absolute top-0 bottom-0 left-0 right-0 opacity-0 cursor-pointer;
   }
 }

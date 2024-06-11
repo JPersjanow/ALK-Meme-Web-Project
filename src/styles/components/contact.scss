@@ -1,11 +1,15 @@
 .person-module {
-  @apply flex flex-col w-2/12 items-center mx-4 box-border shadow-md;
+  @apply flex flex-col items-center bg-slate-800 mb-4 w-[40rem] pt-4 mb-8 rounded-md;
+
+  img {
+    @apply m-0 m-auto h-auto w-[80%] border-red-800 border-solid border-8;
+  }
+
+  h3 {
+    @apply text-xl text-base my-4 mb-4 text-white font-bold text-center;
+  }
 }
 
 .person-module a {
-  @apply text-5xl text-blue-900 mb-4;
-}
-
-.person-module h2 {
-  @apply text-base my-4;
+  @apply text-5xl text-white mb-4;
 }
