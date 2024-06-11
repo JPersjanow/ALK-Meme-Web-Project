@@ -1,6 +1,15 @@
+![alt logo](src/assets/meme-logo.png)
+
 # "Best" Meme Application Ever
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React application simulating Meme forum with ability to like/dislike, sort and add Memes
+
+## "Tech Stack"
+
+- Development environemnt: Vite
+- Styling: SASS, TailwindCSS
+- Requests management: axios library
+- Database management: js-server library
 
 ## Contributors
 
@@ -21,7 +30,7 @@ run `start:db` npm script or execute command `json-server --watch src/constants/
 
 ### Start the app
 
-run `start` npm script or execute command `react-scripts start`
+run `dev` npm script or execute command `vite`
 
 ## API endpoints configuration
 

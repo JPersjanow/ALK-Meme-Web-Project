@@ -48,7 +48,7 @@ export const MemeListComponent = () => {
   }, [memeChangedFlag, location, sort]);
 
   return (
-    <div>
+    <div className="meme-list-container">
       <SortButtonComponent
         sortState={sort}
         handleFunction={handleSortClick}

@@ -1,0 +1,22 @@
+.meme {
+  &-title {
+    @apply mb-4 text-white font-bold;
+
+    &--small {
+      @extend .meme-title;
+      @apply text-[1.2vw];
+    }
+  }
+  &-container {
+    @apply flex flex-col items-center bg-slate-800 mb-4 w-[40%] m-0 m-auto pt-4 mb-8 rounded-md;
+
+    &--no-margin {
+      @extend .meme-container;
+      @apply mb-0;
+    }
+
+    img {
+      @apply m-0 m-auto h-auto w-[90%] border-red-800 border-solid border-8;
+    }
+  }
+}

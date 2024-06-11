@@ -1,4 +1,3 @@
-import "./App.css";
 import { NavComponent } from "./components/NavCompontent";
 import { HotPage } from "./pages/HotPage";
 import { RegularPage } from "./pages/RegularPage";
