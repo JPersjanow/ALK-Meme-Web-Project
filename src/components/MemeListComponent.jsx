@@ -4,6 +4,7 @@ import axios from "axios";
 import { MemeComponent } from "./MemeComponent";
 import { SortButtonComponent } from "./SortButtonComponent";
 import * as constants from "../constants";
+import { ThreeCircles } from "react-loader-spinner";
 
 export const MemeListComponent = () => {
   const [memes, setMemes] = useState(null);
@@ -64,7 +65,17 @@ export const MemeListComponent = () => {
           );
         })
       ) : (
-        <p>Loading...</p>
+        <ThreeCircles
+          visible={true}
+          height="100"
+          width="100"
+          color={
+            location === constants.routes.HOTPAGEROUTE ? "#dc2626" : "#16a34a"
+          }
+          ariaLabel="three-circles-loading"
+          wrapperStyle={{}}
+          wrapperClass="loading"
+        ></ThreeCircles>
       )}
     </div>
   );

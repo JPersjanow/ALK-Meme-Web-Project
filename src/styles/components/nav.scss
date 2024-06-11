@@ -33,7 +33,6 @@
 
     &--regular {
       @apply hover:text-green-600;
-
       a.active {
         @apply text-green-500;
       }
