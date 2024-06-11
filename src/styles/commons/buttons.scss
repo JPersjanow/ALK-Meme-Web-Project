@@ -10,8 +10,15 @@
   &-downvote {
     @apply bg-red-800 hover:bg-red-500;
   }
-}
 
+  &-sort {
+    @apply mx-2 px-2 rounded-md text-white my-3 transition-all duration-500 ease-linear font-bold bg-slate-800 cursor-pointer hover:bg-slate-600 flex flex-row items-center p-3;
+
+    &-icon {
+      @apply mr-1 transition-all duration-300 ease-linear;
+    }
+  }
+}
 .container-like {
   @apply flex gap-4 items-center;
 }
