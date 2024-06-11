@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import imgPlaceholder from "../assets/img-placeholder.png";
 import * as constants from "../constants";
+import { FaCloudUploadAlt } from "react-icons/fa";
+import { IoIosAddCircle } from "react-icons/io";
 
 export const MemeFormComponent = () => {
   const imageMimeType = /image\/(png|jpg|jpeg)/i;
@@ -79,8 +81,8 @@ export const MemeFormComponent = () => {
       </div>
       <div className="add-meme-form-container">
         <form onSubmit={handleSubmit} className="add-meme-form">
-          <div class="add-meme-form-input-container">
-            <label class="add-meme-form-label" for="memeUploadTitle">
+          <div className="add-meme-form-input-container">
+            <label className="add-meme-form-label" htmlFor="memeUploadTitle">
               Meme Title
             </label>
             <input
@@ -91,12 +93,17 @@ export const MemeFormComponent = () => {
             ></input>
           </div>
           <div className="add-meme-form-input-container">
-            <label for="memeUpload" class="add-meme-form-label">
-              Choose your Meme!
-            </label>
-            <input id="memeUpload" type="file" onChange={handleFileChange} />
+            <div className="file-upload">
+              <FaCloudUploadAlt></FaCloudUploadAlt>
+              <h3>Click box to upload</h3>
+              <p>Maximun file size 10mb</p>
+              <input type="file" onChange={handleFileChange} />
+            </div>
           </div>
-          <button type="submit">Submit</button>
+          <button className="button-submit group" type="submit">
+            <IoIosAddCircle className="button-submit-icon group-hover:rotate-180"></IoIosAddCircle>
+            Add the Meme!
+          </button>
         </form>
       </div>
     </div>

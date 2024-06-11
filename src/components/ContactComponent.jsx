@@ -1,15 +1,15 @@
 import { IoLogoLinkedin } from "react-icons/io5";
 
-export const ContactComponent = ({ namePerson, urlPerson, urlPersonImg }) => {
+export const ContactComponent = ({ name, url, image }) => {
   return (
     <div className="person-module">
       <img
         className="img-person-module"
-        src={urlPersonImg}
-        alt={`${namePerson} creator of the page`}
+        src={image}
+        alt={`${name} creator of the page`}
       />
-      <h3>{namePerson}</h3>
-      <a href={urlPerson}>
+      <h3>{name}</h3>
+      <a href={url}>
         <IoLogoLinkedin></IoLogoLinkedin>
       </a>
     </div>
