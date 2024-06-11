@@ -20,6 +20,11 @@
     @apply shadow-orange-600;
   }
 
+  &--violet-shadow {
+    @extend .title-header;
+    @apply shadow-violet-600;
+  }
+
   h2 {
     font-size: 40px;
     color: white;

@@ -1,15 +1,15 @@
 /* MemeFormCompontent */
 
-.add-meme {
+.login {
   &-container {
-    @apply font-bold mt-10 flex flex-row-reverse w-3/4 mx-auto justify-center gap-8 text-left;
+    @apply flex flex-col items-center h-screen;
   }
 
   &-form {
     @apply flex flex-col items-center;
 
     &-container {
-      @apply border-2 border-slate-600 py-4 px-4 rounded-md;
+      @apply border-2 border-slate-600 py-4 px-10 rounded-md mt-8;
     }
 
     &-input {
@@ -30,19 +30,5 @@
         @apply mb-2 text-xl;
       }
     }
-  }
-}
-.file-upload {
-  @apply flex flex-col items-center text-center border-dashed border-2 border-blue-600 p-6 relative cursor-pointer;
-
-  svg {
-    @apply text-blue-600 text-4xl;
-  }
-  p {
-    @apply mt-3.5 mt-3;
-  }
-
-  input {
-    @apply block h-max w-max absolute top-0 bottom-0 left-0 right-0 opacity-0 cursor-pointer;
   }
 }
