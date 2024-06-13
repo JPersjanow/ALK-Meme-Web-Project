@@ -59,7 +59,7 @@ export const MemeListComponent = ({ addedBy }) => {
       })
       .catch((error) => {
         notifyError("Error getting memes");
-        navigate(constants.routes.ERRORROUTE);
+        navigate(constants.routes.ERRORROUTE, { state: { error: error.message, errorCode: error.code } })
       });
   }, [memeChangedFlag, location, sort]);
 

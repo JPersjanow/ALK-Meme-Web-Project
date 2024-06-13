@@ -1,20 +1,30 @@
 import { MdError } from "react-icons/md";
-import MemeBackground from "../assets/meme-background.png";
-
+import { BiSolidMessageSquareError } from "react-icons/bi";
+import { useLocation } from "react-router-dom";
 
 export const ErrorPage = () => {
+    let location = useLocation();
+    console.log(location);
     return (
         <div>
-          <div
-            className="background"
-            style={{ backgroundImage: `url(${MemeBackground})` }}
-          >
+          <div>
             <div className="title-header--red-shadow">
               <h2>Ooops! I think we got an error</h2>
               <div className="title-header-icon text-red-500">
                 <MdError></MdError>
               </div>
             </div>
+              {location.state ?
+                  <div className="error-container">
+                      <h2><BiSolidMessageSquareError></BiSolidMessageSquareError>{location.state.errorCode}</h2>
+                      <h3>Please contact system administrator</h3>
+                      <h3>{location.state.error}</h3>
+                  </div>
+                  :
+                  <div className="error-container">
+                  <h3><BiSolidMessageSquareError></BiSolidMessageSquareError> This is not a page you are looking for</h3>
+                  </div>
+              }
           </div>
         </div>
       );

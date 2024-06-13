@@ -5,6 +5,8 @@ import * as constants from "../../constants/index.js";
 import { ButtonLikeComponent } from "./ButtonLikeCompontent.jsx";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
+import { notifyError, notifySuccess } from "../Notifications/ToastNotification.jsx";
+import { generate } from "random-words";
 
 export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
   const [title, setTitle] = useState(meme.title);
@@ -42,10 +44,10 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
         return axios.put(constants.endpoints.MEME(meme.id), payload);
       })
       .then((response) => {
-        console.log("Success:", response.data);
+        notifySuccess(generate() + "!");
       })
       .catch((error) => {
-        console.error("Error:", error);
+        notifyError("We couldn't update the likes, please try again later");
       });
   };
 

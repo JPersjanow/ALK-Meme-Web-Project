@@ -55,7 +55,7 @@ export const MemeFormComponent = () => {
       })
       .catch((error) => {
         notifyError("Error occurred while adding meme!");
-        navigate(constants.routes.ERRORROUTE);
+        navigate(constants.routes.ERRORROUTE, { state: { error: error.message, errorCode: error.code } });
       });
   };
 
