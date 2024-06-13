@@ -29,10 +29,10 @@ export const LoginFormComponent = () => {
       })
       .then((loginSuccesfull) => {
         if (loginSuccesfull) {
-          notifySuccess("User logged in");
+          notifySuccess("Hello you! Nice logging");
           navigate(constants.routes.USERPAGE);
         } else {
-          notifyError("User does not exists! Register first");
+          notifyError("Nah! Register first");
         }
       })
       .catch((error) => {

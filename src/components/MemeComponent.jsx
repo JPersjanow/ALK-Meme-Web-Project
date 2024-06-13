@@ -81,7 +81,6 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
             buttonClass="button-downvote"
             numberVotes={downvotes}
           ></ButtonLikeComponent>
-          {addedBy && <h3 className="text-white">Meme Author: {addedBy}</h3>}
         </div>
       </div>
     </div>

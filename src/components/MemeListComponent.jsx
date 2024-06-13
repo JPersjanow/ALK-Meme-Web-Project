@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { MemeComponent } from "./MemeComponent";
 import { SortButtonComponent } from "./SortButtonComponent";
 import * as constants from "../constants";
 import { ThreeCircles } from "react-loader-spinner";
+import { notifyError } from "./ToastNotification.jsx";
 
 export const MemeListComponent = ({ addedBy }) => {
   const [memes, setMemes] = useState(null);
   const [memeChangedFlag, setMemeChangedFlag] = useState(false);
   const location = useLocation().pathname;
   const [sort, setSort] = useState(false);
+  const navigate = useNavigate();
   var endpoint = "";
 
   if (addedBy) {
@@ -36,23 +38,29 @@ export const MemeListComponent = ({ addedBy }) => {
   };
 
   useEffect(() => {
-    axios.get(endpoint).then((response) => {
-      const memesList = response.data;
-      const filteredMemesList = memesList
-        .filter((meme) => {
-          if (
-            location === constants.routes.HOTPAGEROUTE ||
-            location === constants.routes.MAINROUTE
-          ) {
-            return meme ? meme.upvotes - meme.downvotes > 5 : null;
-          } else {
-            return meme ? meme.upvotes - meme.downvotes <= 5 : null;
-          }
-        })
-        .sort((meme1, meme2) => sortMemes(meme1, meme2));
-      setMemes(filteredMemesList);
-      setMemeChangedFlag(false);
-    });
+    axios
+      .get(endpoint)
+      .then((response) => {
+        const memesList = response.data;
+        const filteredMemesList = memesList
+          .filter((meme) => {
+            if (
+              location === constants.routes.HOTPAGEROUTE ||
+              location === constants.routes.MAINROUTE
+            ) {
+              return meme ? meme.upvotes - meme.downvotes > 5 : null;
+            } else {
+              return meme ? meme.upvotes - meme.downvotes <= 5 : null;
+            }
+          })
+          .sort((meme1, meme2) => sortMemes(meme1, meme2));
+        setMemes(filteredMemesList);
+        setMemeChangedFlag(false);
+      })
+      .catch((error) => {
+        notifyError("Error getting memes");
+        navigate(constants.routes.ERRORROUTE);
+      });
   }, [memeChangedFlag, location, sort]);
 
   return (
