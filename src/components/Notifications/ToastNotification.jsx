@@ -2,11 +2,11 @@ import { toast, Bounce } from "react-toastify";
 
 const options = {
   position: "bottom-right",
-  autoClose: 4000,
+  autoClose: 3000,
   hideProgressBar: false,
   closeOnClick: true,
-  pauseOnHover: true,
-  draggable: true,
+  pauseOnHover: false,
+  draggable: false,
   progress: undefined,
   theme: "dark",
   transition: Bounce,
