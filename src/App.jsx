@@ -8,6 +8,8 @@ import { LoginPage } from "./pages/LoginPage";
 import { UserPage } from "./pages/UserPage.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import * as constants from "./constants";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <BrowserRouter>
         <NavComponent></NavComponent>
         <main>
+          <ToastContainer />
           <Routes>
             <Route
               path={constants.routes.MAINROUTE}

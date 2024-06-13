@@ -1,6 +1,7 @@
 import { useCookies } from "react-cookie";
 import * as constants from "../constants";
 import { useNavigate } from "react-router-dom";
+import { notifySuccess } from "./ToastNotification.jsx";
 
 export const LogoutButtonComponent = ({ text, icon, className }) => {
   const [cookies, setCookies, removeCookie] = useCookies();
@@ -9,6 +10,7 @@ export const LogoutButtonComponent = ({ text, icon, className }) => {
   const handleClick = () => {
     removeCookie(constants.cookies.COOKIE_USER_LOGGED);
     removeCookie(constants.cookies.COOKIE_USER_DATA);
+    notifySuccess("User logged out!");
     navigate(constants.routes.HOTPAGEROUTE);
   };
 

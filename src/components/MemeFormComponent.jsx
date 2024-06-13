@@ -6,6 +6,7 @@ import * as constants from "../constants";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { IoIosAddCircle } from "react-icons/io";
 import { useCookies } from "react-cookie";
+import { notifyError, notifySuccess } from "./ToastNotification.jsx";
 
 export const MemeFormComponent = () => {
   const imageMimeType = /image\/(png|jpg|jpeg)/i;
@@ -46,9 +47,11 @@ export const MemeFormComponent = () => {
     axios
       .post(constants.endpoints.MEMES, payload)
       .then((response) => {
+        notifySuccess("Meme added");
         navigate(constants.routes.REGULARPAGEROUTE);
       })
       .catch((error) => {
+        notifyError("Error occurred while adding meme!");
         navigate(constants.routes.ERRORROUTE);
       });
   };

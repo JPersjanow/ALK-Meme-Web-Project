@@ -3,6 +3,7 @@ import axios from "axios";
 import * as constants from "../constants";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
+import { notifyError, notifySuccess } from "./ToastNotification.jsx";
 
 export const LoginFormComponent = () => {
   const [cookies, setCookies] = useCookies();
@@ -13,6 +14,7 @@ export const LoginFormComponent = () => {
       .get(constants.endpoints.LOGIN(username, password))
       .then((response) => {
         if (response.data.length === 1) {
+          console.log("logging in");
           setCookies(constants.cookies.COOKIE_USER_LOGGED, true);
           setCookies(constants.cookies.COOKIE_USER_DATA, {
             username: username,
@@ -20,13 +22,22 @@ export const LoginFormComponent = () => {
             lname: response.data[0].lname,
             id: response.data[0].id,
           });
+          return true;
+        }
+
+        return false;
+      })
+      .then((loginSuccesfull) => {
+        if (loginSuccesfull) {
+          notifySuccess("User logged in");
+          navigate(constants.routes.USERPAGE);
+        } else {
+          notifyError("User does not exists! Register first");
         }
       })
-      .then(() => {
-        navigate(constants.routes.USERPAGE);
-      })
       .catch((error) => {
-        console.log(error);
+        notifyError("Error occurred while logging in user");
+        navigate(constants.routes.ERRORROUTE);
       });
   };
 
