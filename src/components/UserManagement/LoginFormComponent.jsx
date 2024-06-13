@@ -66,7 +66,7 @@ export const LoginFormComponent = () => {
       })
       .catch((error) => {
         notifyError("Error occurred while logging in user");
-        navigate(constants.routes.ERRORROUTE);
+        navigate(constants.routes.ERRORROUTE, { state: { error: error.message, errorCode: error.code } });
       });
   };
 
