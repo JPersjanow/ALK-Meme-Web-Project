@@ -3,6 +3,10 @@ import axios from "axios";
 import * as constants from "../../constants/index.js";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
+import {
+  notifyError,
+  notifySuccess,
+} from "../Notifications/ToastNotification.jsx";
 
 export const LoginFormComponent = () => {
   const [cookies, setCookies] = useCookies();
@@ -26,11 +30,15 @@ export const LoginFormComponent = () => {
       })
       .then((loginSuccessful) => {
         if (loginSuccessful) {
+          notifySuccess("Hello you! Nice logging");
           navigate(constants.routes.USERPAGE);
+        } else {
+          notifyError("Nah! Register first");
         }
       })
       .catch((error) => {
-        console.log(error);
+        notifyError("Error occurred while logging in user");
+        navigate(constants.routes.ERRORROUTE);
       });
   };
 
