@@ -27,8 +27,8 @@ export const LoginFormComponent = () => {
 
         return false;
       })
-      .then((loginSuccesfull) => {
-        if (loginSuccesfull) {
+      .then((loginSuccessful) => {
+        if (loginSuccessful) {
           notifySuccess("Hello you! Nice logging");
           navigate(constants.routes.USERPAGE);
         } else {
