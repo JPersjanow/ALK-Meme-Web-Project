@@ -11,7 +11,11 @@
     }
 
     h3 {
-      @apply text-3xl mt-6;
+      @apply flex items-center text-3xl mt-6;
+
+      svg {
+        @apply text-red-600 text-5xl mr-2;
+      }
     }
   }
 }
