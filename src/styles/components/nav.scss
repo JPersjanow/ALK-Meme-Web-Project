@@ -65,11 +65,27 @@
       }
     }
 
+    &--profile {
+      @apply hover:text-cyan-600;
+
+      a.active {
+        @apply text-cyan-500;
+      }
+    }
+
     &--login {
       @apply hover:text-violet-600;
 
       a.active {
         @apply text-violet-500;
+      }
+    }
+
+    &--logout {
+      @apply hover:text-amber-600;
+
+      a.active {
+        @apply text-amber-500;
       }
     }
 
