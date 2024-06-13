@@ -7,8 +7,11 @@ import {
   notifyError,
   notifySuccess,
 } from "../Notifications/ToastNotification.jsx";
+import {useState} from "react";
 
 export const LoginFormComponent = () => {
+  const [usernameInputStyleModifier, setUsernameInputStyleModifier] = useState("");
+  const [passwordInputStyleModifier, setPasswordInputStyleModifier] = useState("");
   const [cookies, setCookies] = useCookies();
   const navigate = useNavigate();
 
@@ -37,9 +40,11 @@ export const LoginFormComponent = () => {
       switch (statusObject.reason) {
         case "noUser":
           notifyError("Nah! Register first");
+          setUsernameInputStyleModifier("--error");
           break;
         case "wrongPassword":
           notifyError("Check your password baby");
+          setPasswordInputStyleModifier("--error");
           break;
         case "multipleUsers":
           notifyError("Seems there are more of you! Contact administrator");
@@ -78,7 +83,7 @@ export const LoginFormComponent = () => {
         </label>
         <input
           id="usernameField"
-          className="login-form-input"
+          className={`login-form-input${usernameInputStyleModifier}`}
           placeholder="Username"
         ></input>
         <label className="login-form-label" htmlFor="passwordField">
@@ -87,7 +92,7 @@ export const LoginFormComponent = () => {
         <input
           id="passwordField"
           type="password"
-          className="login-form-input"
+          className={`login-form-input${passwordInputStyleModifier}`}
           placeholder="Password"
         ></input>
         <button className="button-login group" type="submit">

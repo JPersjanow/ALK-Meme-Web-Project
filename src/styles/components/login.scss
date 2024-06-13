@@ -18,6 +18,11 @@
       &:focus {
         @apply border-blue-600 border-2;
       }
+
+      &--error {
+        @extend .login-form-input;
+        @apply border-red-600;
+      }
     }
 
     &-input-container {
