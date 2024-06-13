@@ -12,29 +12,52 @@ export const LoginFormComponent = () => {
   const [cookies, setCookies] = useCookies();
   const navigate = useNavigate();
 
+  const returnUserQueryResponseStatus = (response, password) => {
+    if (response.data.length === 1 && response.data[0].password === password) {
+      return { status: true, reason: "success" };
+    } else if (response.data.length === 0) {
+      return { status: false, reason: "noUser" };
+    } else if (response.data[0].password !== password) {
+      return { status: false, reason: "wrongPassword" };
+    } else {
+      return { status: false, reason: "multipleUsers" };
+    }
+  };
+
+  const handleUserQueryResponseStatus = (statusObject, username, password) => {
+    if (statusObject.status) {
+      setCookies(constants.cookies.COOKIE_USER_LOGGED, true);
+      setCookies(constants.cookies.COOKIE_USER_DATA, {
+        username: username,
+        lname: password,
+      });
+      notifySuccess("Hello you! Nice logging");
+      navigate(constants.routes.USERPAGE);
+    } else {
+      switch (statusObject.reason) {
+        case "noUser":
+          notifyError("Nah! Register first");
+          break;
+        case "wrongPassword":
+          notifyError("Check your password baby");
+          break;
+        case "multipleUsers":
+          notifyError("Seems there are more of you! Contact administrator");
+          break;
+        default:
+          navigate(constants.routes.ERRORROUTE);
+      }
+    }
+  };
+
   const loginUser = (username, password) => {
     axios
-      .get(constants.endpoints.LOGIN(username, password))
+      .get(constants.endpoints.USER(username))
       .then((response) => {
-        if (response.data.length === 1) {
-          setCookies(constants.cookies.COOKIE_USER_LOGGED, true);
-          setCookies(constants.cookies.COOKIE_USER_DATA, {
-            username: username,
-            fname: response.data[0].fname,
-            lname: response.data[0].lname,
-            id: response.data[0].id,
-          });
-          return true;
-        }
-        return false;
+        return returnUserQueryResponseStatus(response, password);
       })
-      .then((loginSuccessful) => {
-        if (loginSuccessful) {
-          notifySuccess("Hello you! Nice logging");
-          navigate(constants.routes.USERPAGE);
-        } else {
-          notifyError("Nah! Register first");
-        }
+      .then((status) => {
+        handleUserQueryResponseStatus(status);
       })
       .catch((error) => {
         notifyError("Error occurred while logging in user");
