@@ -27,6 +27,15 @@
       @extend .button-sort-icon;
     }
   }
+
+  &-login {
+    @extend .button-sort;
+    @apply hover:bg-violet-600;
+
+    &-icon {
+      @extend .button-sort-icon;
+    }
+  }
 }
 .container-like {
   @apply flex gap-4 items-center;

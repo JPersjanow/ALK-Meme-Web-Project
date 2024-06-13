@@ -1,4 +1,4 @@
-import { MemeListComponent } from "../components/MemeListComponent";
+import { MemeListComponent } from "../components/Memes/MemeListComponent.jsx";
 import { BsFire } from "react-icons/bs";
 import MemeBackground from "../assets/meme-background.png";
 

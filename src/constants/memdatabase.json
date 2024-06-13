@@ -1,4 +1,13 @@
 {
+  "users": [
+    {
+      "id": "uid1",
+      "username": "admin",
+      "password": "admin",
+      "fname": "Admin",
+      "lname": "User"
+    }
+  ],
   "memes": [
     {
       "id": "1",

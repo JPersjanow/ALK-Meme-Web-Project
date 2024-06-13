@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import imgPlaceholder from "../assets/img-placeholder.png";
-import * as constants from "../constants";
+import imgPlaceholder from "../../assets/img-placeholder.png";
+import * as constants from "../../constants/index.js";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { IoIosAddCircle } from "react-icons/io";
+import { useCookies } from "react-cookie";
 
 export const MemeFormComponent = () => {
   const imageMimeType = /image\/(png|jpg|jpeg)/i;
   const [title, setTitle] = useState(
-    "This will be your Meme Title, start typing..."
+    "This will be your Meme Title, start typing...",
   );
   const [file, setFile] = useState(null);
   const [img, setImg] = useState(imgPlaceholder);
+  const [cookies, setCookies] = useCookies();
   const navigate = useNavigate();
 
   const handleChange = (event) => {
@@ -39,6 +41,7 @@ export const MemeFormComponent = () => {
       downvotes: 0,
       img: img,
       added_at: Date.now(),
+      added_by_user: cookies.userData.username,
     };
     axios
       .post(constants.endpoints.MEMES, payload)

@@ -1,9 +1,11 @@
-import { NavComponent } from "./components/NavCompontent";
+import { NavComponent } from "./components/Navigation/NavCompontent.jsx";
 import { HotPage } from "./pages/HotPage";
 import { RegularPage } from "./pages/RegularPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { AddMemePage } from "./pages/AddMemePage";
 import { ContactPage } from "./pages/ContactPage";
+import { LoginPage } from "./pages/LoginPage";
+import { UserPage } from "./pages/UserPage.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import * as constants from "./constants";
 
@@ -37,6 +39,14 @@ function App() {
             <Route
               path={constants.routes.CONTACTPAGE}
               element={<ContactPage></ContactPage>}
+            ></Route>
+            <Route
+              path={constants.routes.LOGINPAGE}
+              element={<LoginPage></LoginPage>}
+            ></Route>
+            <Route
+              path={constants.routes.USERPAGE}
+              element={<UserPage></UserPage>}
             ></Route>
           </Routes>
         </main>
