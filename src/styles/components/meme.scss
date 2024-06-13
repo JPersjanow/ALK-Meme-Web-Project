@@ -4,11 +4,15 @@
   }
 
   &-title {
-    @apply mb-4 text-white font-bold text-center;
+    @apply mb-4 text-white font-bold text-center flex flex-row-reverse items-center;
 
     &--small {
       @extend .meme-title;
       @apply text-[1.2vw];
+    }
+
+    svg {
+      @apply ml-2;
     }
   }
   &-container {
@@ -17,6 +21,11 @@
     &--no-margin {
       @extend .meme-container;
       @apply mb-0;
+    }
+
+    &--hot {
+      @extend .meme-container;
+      @apply shadow-lg shadow-red-600;
     }
 
     img {

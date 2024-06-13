@@ -22,7 +22,12 @@ export const MemeFormComponent = () => {
   const navigate = useNavigate();
 
   const handleChange = (event) => {
-    setTitle(event.target.value);
+    if (event.target.value.length <= 15) {
+      setTitle(event.target.value);
+    } else {
+      notifyError("Meme title is too loong! 15 characters max")
+    }
+
   };
 
   const handleFileChange = (event) => {

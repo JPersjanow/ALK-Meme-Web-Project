@@ -44,14 +44,17 @@ export const MemeListComponent = ({ addedBy }) => {
         const memesList = response.data;
         const filteredMemesList = memesList
           .filter((meme) => {
-            if (
-              location === constants.routes.HOTPAGEROUTE ||
-              location === constants.routes.MAINROUTE
-            ) {
-              return meme ? meme.upvotes - meme.downvotes > 5 : null;
-            } else {
-              return meme ? meme.upvotes - meme.downvotes <= 5 : null;
-            }
+              if (addedBy) {
+                  return meme;
+              }
+             if (
+               location === constants.routes.HOTPAGEROUTE ||
+               location === constants.routes.MAINROUTE
+             ) {
+               return meme ? meme.upvotes - meme.downvotes > 5 : null;
+             } else {
+               return meme ? meme.upvotes - meme.downvotes <= 5 : null;
+             }
           })
           .sort((meme1, meme2) => sortMemes(meme1, meme2));
         setMemes(filteredMemesList);
