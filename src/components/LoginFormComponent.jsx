@@ -20,10 +20,14 @@ export const LoginFormComponent = () => {
             lname: response.data[0].lname,
             id: response.data[0].id,
           });
+          return true;
         }
+        return false;
       })
-      .then(() => {
-        navigate(constants.routes.USERPAGE);
+      .then((loginSuccessful) => {
+        if (loginSuccessful) {
+          navigate(constants.routes.USERPAGE);
+        }
       })
       .catch((error) => {
         console.log(error);
