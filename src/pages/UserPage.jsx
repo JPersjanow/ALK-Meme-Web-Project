@@ -1,6 +1,6 @@
 import { IoPersonSharp } from "react-icons/io5";
 import { useCookies } from "react-cookie";
-import { MemeListComponent } from "../components/MemeListComponent.jsx";
+import { MemeListComponent } from "../components/Memes/MemeListComponent.jsx";
 
 export const UserPage = () => {
   const [cookies, setCookies] = useCookies();

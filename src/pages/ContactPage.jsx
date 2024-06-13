@@ -1,4 +1,4 @@
-import { ContactComponent } from "../components/ContactComponent";
+import { ContactComponent } from "../components/Contact/ContactComponent.jsx";
 import { MdOutlineContactSupport } from "react-icons/md";
 import JPContactImage from "../assets/JP-contact-profile.png";
 import MKContactImage from "../assets/MK-contact-profile.png";

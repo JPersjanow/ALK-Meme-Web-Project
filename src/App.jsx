@@ -1,4 +1,4 @@
-import { NavComponent } from "./components/NavCompontent";
+import { NavComponent } from "./components/Navigation/NavCompontent.jsx";
 import { HotPage } from "./pages/HotPage";
 import { RegularPage } from "./pages/RegularPage";
 import { ErrorPage } from "./pages/ErrorPage";

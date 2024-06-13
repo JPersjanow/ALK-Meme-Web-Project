@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import * as constants from "../constants";
-import { ButtonLikeComponent } from "./ButtonLikeCompontent";
+import * as constants from "../../constants/index.js";
+import { ButtonLikeComponent } from "./ButtonLikeCompontent.jsx";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 

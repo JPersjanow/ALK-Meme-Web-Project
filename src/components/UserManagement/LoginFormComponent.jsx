@@ -1,6 +1,6 @@
 import { IoLogIn } from "react-icons/io5";
 import axios from "axios";
-import * as constants from "../constants";
+import * as constants from "../../constants/index.js";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
