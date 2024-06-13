@@ -1,11 +1,11 @@
+import * as constants from "../../constants/index.js";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import imgPlaceholder from "../../assets/img-placeholder.png";
-import * as constants from "../../constants/index.js";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { IoIosAddCircle } from "react-icons/io";
 import { useCookies } from "react-cookie";
+import imgPlaceholder from "../../assets/img-placeholder.png";
 import {
   notifyError,
   notifySuccess,

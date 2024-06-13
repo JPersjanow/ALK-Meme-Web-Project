@@ -1,10 +1,10 @@
+import * as constants from "../../constants/index.js";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { ThreeCircles } from "react-loader-spinner";
 import { MemeComponent } from "./MemeComponent.jsx";
 import { SortButtonComponent } from "./SortButtonComponent.jsx";
-import * as constants from "../../constants/index.js";
-import { ThreeCircles } from "react-loader-spinner";
 import { notifyError } from "../Notifications/ToastNotification.jsx";
 
 export const MemeListComponent = ({ addedBy }) => {

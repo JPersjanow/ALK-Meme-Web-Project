@@ -1,7 +1,5 @@
-import { useCookies } from "react-cookie";
-import { NavButtonComponent } from "./NavButtonCompontent.jsx";
-import { LogoutButtonComponent } from "../UserManagement/LogoutButtonComponent.jsx";
 import * as constants from "../../constants/index.js";
+import { useCookies } from "react-cookie";
 import { BsFire } from "react-icons/bs";
 import { BiSolidHome } from "react-icons/bi";
 import { MdOutlineAddCircle } from "react-icons/md";
@@ -9,7 +7,10 @@ import { MdOutlineContactSupport } from "react-icons/md";
 import { IoLogIn } from "react-icons/io5";
 import { IoLogOut } from "react-icons/io5";
 import { IoPersonSharp } from "react-icons/io5";
+import { NavButtonComponent } from "./NavButtonCompontent.jsx";
+import { LogoutButtonComponent } from "../UserManagement/LogoutButtonComponent.jsx";
 import MemeLogo from "../../assets/meme-logo.png";
+
 
 export const NavComponent = () => {
   const [cookies, setCookies] = useCookies();

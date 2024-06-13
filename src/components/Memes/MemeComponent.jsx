@@ -1,13 +1,13 @@
+import * as constants from "../../constants/index.js";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { generate } from "random-words";
 import axios from "axios";
-import * as constants from "../../constants/index.js";
-import { ButtonLikeComponent } from "./ButtonLikeCompontent.jsx";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 import { BsFire } from "react-icons/bs";
+import { ButtonLikeComponent } from "./ButtonLikeCompontent.jsx";
 import { notifyError, notifySuccess } from "../Notifications/ToastNotification.jsx";
-import { generate } from "random-words";
 
 export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
   const [title, setTitle] = useState(meme.title);

@@ -3,6 +3,10 @@
 .login {
   &-container {
     @apply flex flex-col items-center h-screen;
+
+    h2 {
+      @apply text-3xl mt-6 mb-4;
+    }
   }
 
   &-form {

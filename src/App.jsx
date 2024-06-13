@@ -10,10 +10,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import * as constants from "./constants";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import MemeBackground from "./assets/meme-background.png";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App background h-screen" style={{backgroundImage: `url(${MemeBackground})`}}>
       <BrowserRouter>
         <NavComponent></NavComponent>
         <main>
