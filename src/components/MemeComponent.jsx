@@ -11,6 +11,7 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
   const [img, setImg] = useState(meme.img);
   const [upvotes, setUpvotes] = useState(meme.upvotes);
   const [downvotes, setDownvotes] = useState(meme.downvotes);
+  const [addedBy, setAddedBy] = useState(meme.added_by_user);
   const location = useLocation().pathname;
 
   const updateStateAndReturnPayload = (type, response) => {
@@ -56,7 +57,6 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
       (location === constants.routes.REGULARPAGEROUTE &&
         upvotes - downvotes > 5)
     ) {
-      console.log("change needed");
       setMemeChangedFlag(true);
     }
   }, [upvotes, downvotes, setMemeChangedFlag, location]);
@@ -81,6 +81,7 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
             buttonClass="button-downvote"
             numberVotes={downvotes}
           ></ButtonLikeComponent>
+          {addedBy && <h3 className="text-white">Meme Author: {addedBy}</h3>}
         </div>
       </div>
     </div>

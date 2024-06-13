@@ -5,12 +5,20 @@ import { MemeComponent } from "./MemeComponent";
 import { SortButtonComponent } from "./SortButtonComponent";
 import * as constants from "../constants";
 import { ThreeCircles } from "react-loader-spinner";
+import { MEMES_BY_ADDED_BY } from "../constants/endpoints.js";
 
-export const MemeListComponent = () => {
+export const MemeListComponent = ({ addedBy }) => {
   const [memes, setMemes] = useState(null);
   const [memeChangedFlag, setMemeChangedFlag] = useState(false);
   const location = useLocation().pathname;
   const [sort, setSort] = useState(false);
+  var endpoint = "";
+
+  if (addedBy) {
+    endpoint = constants.endpoints.MEMES_BY_ADDED_BY(addedBy);
+  } else {
+    endpoint = constants.endpoints.MEMES;
+  }
 
   const sortMemes = (meme1, meme2) => {
     if (sort) {
@@ -29,7 +37,7 @@ export const MemeListComponent = () => {
   };
 
   useEffect(() => {
-    axios.get(constants.endpoints.MEMES).then((response) => {
+    axios.get(endpoint).then((response) => {
       const memesList = response.data;
       const filteredMemesList = memesList
         .filter((meme) => {
