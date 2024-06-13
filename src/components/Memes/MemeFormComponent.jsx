@@ -13,9 +13,8 @@ import {
 
 export const MemeFormComponent = () => {
   const imageMimeType = /image\/(png|jpg|jpeg)/i;
-  const [title, setTitle] = useState(
-    "This will be your Meme Title, start typing...",
-  );
+  let titlePlaceholder = "This will be your Meme Title, start typing..."
+  const [title, setTitle] = useState(titlePlaceholder);
   const [file, setFile] = useState(null);
   const [img, setImg] = useState(imgPlaceholder);
   const [cookies, setCookies] = useCookies();
@@ -43,6 +42,14 @@ export const MemeFormComponent = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if(title===titlePlaceholder) {
+      notifyError("Be a little bit more creative! Change the title");
+      return undefined;
+    }
+    if(img===imgPlaceholder) {
+      notifyError("Be a little bit more creative! Change the image");
+      return undefined;
+    }
 
     const payload = {
       title: title,
