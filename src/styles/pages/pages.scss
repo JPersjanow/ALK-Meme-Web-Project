@@ -25,6 +25,11 @@
     @apply shadow-violet-600;
   }
 
+  &--cyan-shadow {
+    @extend .title-header;
+    @apply shadow-cyan-600;
+  }
+
   h2 {
     font-size: 40px;
     color: white;
