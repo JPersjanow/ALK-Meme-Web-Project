@@ -6,7 +6,10 @@ import * as constants from "../../constants/index.js";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { IoIosAddCircle } from "react-icons/io";
 import { useCookies } from "react-cookie";
-import { notifyError, notifySuccess } from "./ToastNotification.jsx";
+import {
+  notifyError,
+  notifySuccess,
+} from "../Notifications/ToastNotification.jsx";
 
 export const MemeFormComponent = () => {
   const imageMimeType = /image\/(png|jpg|jpeg)/i;

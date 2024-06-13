@@ -5,7 +5,7 @@ import { MemeComponent } from "./MemeComponent.jsx";
 import { SortButtonComponent } from "./SortButtonComponent.jsx";
 import * as constants from "../../constants/index.js";
 import { ThreeCircles } from "react-loader-spinner";
-import { notifyError } from "./ToastNotification.jsx";
+import { notifyError } from "../Notifications/ToastNotification.jsx";
 
 export const MemeListComponent = ({ addedBy }) => {
   const [memes, setMemes] = useState(null);

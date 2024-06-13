@@ -1,7 +1,7 @@
 import { useCookies } from "react-cookie";
 import * as constants from "../../constants/index.js";
 import { useNavigate } from "react-router-dom";
-import { notify, notifySuccess } from "./ToastNotification.jsx";
+import { notify } from "../Notifications/ToastNotification.jsx";
 
 export const LogoutButtonComponent = ({ text, icon, className }) => {
   const [cookies, setCookies, removeCookie] = useCookies();
