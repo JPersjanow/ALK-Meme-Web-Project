@@ -57,7 +57,7 @@ export const LoginFormComponent = () => {
         return returnUserQueryResponseStatus(response, password);
       })
       .then((status) => {
-        handleUserQueryResponseStatus(status);
+        handleUserQueryResponseStatus(status, username, password);
       })
       .catch((error) => {
         notifyError("Error occurred while logging in user");
