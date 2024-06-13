@@ -1,7 +1,7 @@
 import { IoLogIn } from "react-icons/io5";
 import MemeBackground from "../assets/meme-background.png";
-import { LoginFormComponent} from "../components/LoginFormComponent.jsx";
-import { RegisterButtonComponent } from "../components/RegisterButtonComponent.jsx";
+import { LoginFormComponent } from "../components/UserManagement/LoginFormComponent.jsx";
+import { RegisterButtonComponent } from "../components/UserManagement/RegisterButtonComponent.jsx";
 
 export const LoginPage = () => {
   return (

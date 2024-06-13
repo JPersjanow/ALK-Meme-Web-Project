@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import * as constants from "../constants";
-import { ButtonLikeComponent } from "./ButtonLikeCompontent";
+import * as constants from "../../constants/index.js";
+import { ButtonLikeComponent } from "./ButtonLikeCompontent.jsx";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 
@@ -11,7 +11,6 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
   const [img, setImg] = useState(meme.img);
   const [upvotes, setUpvotes] = useState(meme.upvotes);
   const [downvotes, setDownvotes] = useState(meme.downvotes);
-  const [addedBy, setAddedBy] = useState(meme.added_by_user);
   const location = useLocation().pathname;
 
   const updateStateAndReturnPayload = (type, response) => {

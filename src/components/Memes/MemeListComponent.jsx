@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { MemeComponent } from "./MemeComponent";
-import { SortButtonComponent } from "./SortButtonComponent";
-import * as constants from "../constants";
+import { MemeComponent } from "./MemeComponent.jsx";
+import { SortButtonComponent } from "./SortButtonComponent.jsx";
+import * as constants from "../../constants/index.js";
 import { ThreeCircles } from "react-loader-spinner";
 import { notifyError } from "./ToastNotification.jsx";
 

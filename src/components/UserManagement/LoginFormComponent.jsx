@@ -1,6 +1,6 @@
 import { IoLogIn } from "react-icons/io5";
 import axios from "axios";
-import * as constants from "../constants";
+import * as constants from "../../constants/index.js";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { notifyError, notifySuccess } from "./ToastNotification.jsx";
@@ -14,7 +14,6 @@ export const LoginFormComponent = () => {
       .get(constants.endpoints.LOGIN(username, password))
       .then((response) => {
         if (response.data.length === 1) {
-          console.log("logging in");
           setCookies(constants.cookies.COOKIE_USER_LOGGED, true);
           setCookies(constants.cookies.COOKIE_USER_DATA, {
             username: username,
@@ -24,7 +23,6 @@ export const LoginFormComponent = () => {
           });
           return true;
         }
-
         return false;
       })
       .then((loginSuccessful) => {
