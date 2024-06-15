@@ -107,35 +107,35 @@ export const RegisterFormComponent = () => {
   return (
     <div className="user-management-form-container">
       <form onSubmit={handleSubmit} className="user-management-form">
-        <label className="user-management-form-label" htmlFor="firstNameField">
+        <label className="user-management-form-label" htmlFor="firstNameField-register">
           First Name
         </label>
         <input
-          id="firstNameFiel"
+          id="firstNameField-register"
           className={`user-management-form-input${firstNameInputStyleModifier}`}
           placeholder="First Name"
         ></input>
-        <label className="user-management-form-label" htmlFor="lastNameLabel">
+        <label className="user-management-form-label" htmlFor="lastNameLabel-register">
           Last Name
         </label>
         <input
-          id="lastNameLabel"
+          id="lastNameLabel-register"
           className={`user-management-form-input${lastNameInputStyleModifier}`}
           placeholder="Last Name"
         ></input>
-        <label className="user-management-form-label" htmlFor="usernameField">
+        <label className="user-management-form-label" htmlFor="usernameField-register">
           Username
         </label>
         <input
-          id="usernameField"
+          id="usernameField-register"
           className={`user-management-form-input${usernameInputStyleModifier}`}
           placeholder="Username"
         ></input>
-        <label className="user-management-form-label" htmlFor="passwordField">
+        <label className="user-management-form-label" htmlFor="passwordField-register">
           Password
         </label>
         <input
-          id="passwordField"
+          id="passwordField-register"
           type="password"
           className={`user-management-form-input${passwordInputStyleModifier}`}
           placeholder="Password"
