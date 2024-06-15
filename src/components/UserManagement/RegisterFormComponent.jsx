@@ -105,39 +105,39 @@ export const RegisterFormComponent = () => {
   };
 
   return (
-    <div className="login-form-container">
-      <form onSubmit={handleSubmit} className="login-form">
-        <label className="login-form-label" htmlFor="firstNameField">
+    <div className="user-management-form-container">
+      <form onSubmit={handleSubmit} className="user-management-form">
+        <label className="user-management-form-label" htmlFor="firstNameField">
           First Name
         </label>
         <input
           id="firstNameFiel"
-          className={`login-form-input${firstNameInputStyleModifier}`}
+          className={`user-management-form-input${firstNameInputStyleModifier}`}
           placeholder="First Name"
         ></input>
-        <label className="login-form-label" htmlFor="lastNameLabel">
+        <label className="user-management-form-label" htmlFor="lastNameLabel">
           Last Name
         </label>
         <input
           id="lastNameLabel"
-          className={`login-form-input${lastNameInputStyleModifier}`}
+          className={`user-management-form-input${lastNameInputStyleModifier}`}
           placeholder="Last Name"
         ></input>
-        <label className="login-form-label" htmlFor="usernameField">
+        <label className="user-management-form-label" htmlFor="usernameField">
           Username
         </label>
         <input
           id="usernameField"
-          className={`login-form-input${usernameInputStyleModifier}`}
+          className={`user-management-form-input${usernameInputStyleModifier}`}
           placeholder="Username"
         ></input>
-        <label className="login-form-label" htmlFor="passwordField">
+        <label className="user-management-form-label" htmlFor="passwordField">
           Password
         </label>
         <input
           id="passwordField"
           type="password"
-          className={`login-form-input${passwordInputStyleModifier}`}
+          className={`user-management-form-input${passwordInputStyleModifier}`}
           placeholder="Password"
         ></input>
         <button className="button-login group" type="submit">

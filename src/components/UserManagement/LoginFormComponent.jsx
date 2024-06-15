@@ -8,7 +8,6 @@ import {
   notifyError,
   notifySuccess,
 } from "../Notifications/ToastNotification.jsx";
-import { RegisterFormComponent } from "./RegisterFormComponent.jsx";
 
 export const LoginFormComponent = () => {
   const [usernameInputStyleModifier, setUsernameInputStyleModifier] =
@@ -81,23 +80,23 @@ export const LoginFormComponent = () => {
   };
 
   return (
-    <div className="login-form-container">
-      <form onSubmit={handleSubmit} className="login-form">
-        <label className="login-form-label" htmlFor="usernameField">
+    <div className="user-management-form-container">
+      <form onSubmit={handleSubmit} className="user-management-form">
+        <label className="user-management-form-label" htmlFor="usernameField">
           Username
         </label>
         <input
           id="usernameField"
-          className={`login-form-input${usernameInputStyleModifier}`}
+          className={`user-management-form-input${usernameInputStyleModifier}`}
           placeholder="Username"
         ></input>
-        <label className="login-form-label" htmlFor="passwordField">
+        <label className="user-management-form-label" htmlFor="passwordField">
           Password
         </label>
         <input
           id="passwordField"
           type="password"
-          className={`login-form-input${passwordInputStyleModifier}`}
+          className={`user-management-form-input${passwordInputStyleModifier}`}
           placeholder="Password"
         ></input>
         <button className="button-login group" type="submit">
@@ -105,9 +104,6 @@ export const LoginFormComponent = () => {
           Login
         </button>
       </form>
-      <div>
-        <RegisterFormComponent></RegisterFormComponent>
-      </div>
     </div>
   );
 };
