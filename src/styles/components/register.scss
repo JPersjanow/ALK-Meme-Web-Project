@@ -1,0 +1,9 @@
+.register {
+  &-container {
+    @apply hidden;
+
+    &--visible {
+      @apply flex flex-col items-center;
+    }
+  }
+}

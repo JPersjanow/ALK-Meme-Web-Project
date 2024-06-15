@@ -1,5 +1,5 @@
 import * as constants from "../../constants/index.js";
-import {useState} from "react";
+import { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -9,10 +9,11 @@ import {
   notifySuccess,
 } from "../Notifications/ToastNotification.jsx";
 
-
 export const LoginFormComponent = () => {
-  const [usernameInputStyleModifier, setUsernameInputStyleModifier] = useState("");
-  const [passwordInputStyleModifier, setPasswordInputStyleModifier] = useState("");
+  const [usernameInputStyleModifier, setUsernameInputStyleModifier] =
+    useState("");
+  const [passwordInputStyleModifier, setPasswordInputStyleModifier] =
+    useState("");
   const [cookies, setCookies] = useCookies();
   const navigate = useNavigate();
 
@@ -67,7 +68,9 @@ export const LoginFormComponent = () => {
       })
       .catch((error) => {
         notifyError("Error occurred while logging in user");
-        navigate(constants.routes.ERRORROUTE, { state: { error: error.message, errorCode: error.code } });
+        navigate(constants.routes.ERRORROUTE, {
+          state: { error: error.message, errorCode: error.code },
+        });
       });
   };
 
@@ -77,23 +80,23 @@ export const LoginFormComponent = () => {
   };
 
   return (
-    <div className="login-form-container">
-      <form onSubmit={handleSubmit} className="login-form">
-        <label className="login-form-label" htmlFor="usernameField">
+    <div className="user-management-form-container">
+      <form onSubmit={handleSubmit} className="user-management-form">
+        <label className="user-management-form-label" htmlFor="usernameField">
           Username
         </label>
         <input
           id="usernameField"
-          className={`login-form-input${usernameInputStyleModifier}`}
+          className={`user-management-form-input${usernameInputStyleModifier}`}
           placeholder="Username"
         ></input>
-        <label className="login-form-label" htmlFor="passwordField">
+        <label className="user-management-form-label" htmlFor="passwordField">
           Password
         </label>
         <input
           id="passwordField"
           type="password"
-          className={`login-form-input${passwordInputStyleModifier}`}
+          className={`user-management-form-input${passwordInputStyleModifier}`}
           placeholder="Password"
         ></input>
         <button className="button-login group" type="submit">

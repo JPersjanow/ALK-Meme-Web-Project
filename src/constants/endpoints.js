@@ -5,3 +5,4 @@ export const MEMES_BY_ADDED_BY = (username) =>
 export const MEME = (id) => `http://localhost:${port}/memes/${id}`;
 export const USER = (username) =>
   `http://localhost:${port}/users?username=${username}`;
+export const USERS = `http://localhost:${port}/users`;
