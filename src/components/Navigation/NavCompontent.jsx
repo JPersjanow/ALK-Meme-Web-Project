@@ -1,5 +1,6 @@
 import * as constants from "../../constants/index.js";
 import { useCookies } from "react-cookie";
+import { NavLink } from "react-router-dom";
 import { BsFire } from "react-icons/bs";
 import { BiSolidHome } from "react-icons/bi";
 import { MdOutlineAddCircle } from "react-icons/md";
@@ -16,7 +17,9 @@ export const NavComponent = () => {
   const [cookies, setCookies] = useCookies();
   return (
     <nav className="navbar">
-      <img className="navbar-logo" src={MemeLogo} alt="logo" />
+      <NavLink to={constants.routes.HOTPAGEROUTE}>
+        <img className="navbar-logo" src={MemeLogo} alt="logo"/>
+      </NavLink>
       <div className="navbar-main">
         <div className="navbar-top">
           <ul className="navbar-list">
