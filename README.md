@@ -18,6 +18,7 @@ React application simulating Meme forum with ability to like/dislike, sort and a
 - Toaster notifications: react-toastify
 - Spinners: react-loader-spinner
 - Icons: react-icons
+- Random words generator: random-words
 
 ## Contributors
 
