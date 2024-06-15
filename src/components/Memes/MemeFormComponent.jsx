@@ -117,7 +117,7 @@ export const MemeFormComponent = () => {
             <div className="file-upload">
               <FaCloudUploadAlt></FaCloudUploadAlt>
               <h3>Click box to upload</h3>
-              <p>Maximun file size 10mb</p>
+              <p>Maximum file size 10mb</p>
               <input type="file" onChange={handleFileChange} />
             </div>
           </div>
