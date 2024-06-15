@@ -1,5 +1,5 @@
 import * as constants from "../../constants/index.js";
-import {useState} from "react";
+import { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -8,11 +8,13 @@ import {
   notifyError,
   notifySuccess,
 } from "../Notifications/ToastNotification.jsx";
-
+import { RegisterFormComponent } from "./RegisterFormComponent.jsx";
 
 export const LoginFormComponent = () => {
-  const [usernameInputStyleModifier, setUsernameInputStyleModifier] = useState("");
-  const [passwordInputStyleModifier, setPasswordInputStyleModifier] = useState("");
+  const [usernameInputStyleModifier, setUsernameInputStyleModifier] =
+    useState("");
+  const [passwordInputStyleModifier, setPasswordInputStyleModifier] =
+    useState("");
   const [cookies, setCookies] = useCookies();
   const navigate = useNavigate();
 
@@ -67,7 +69,9 @@ export const LoginFormComponent = () => {
       })
       .catch((error) => {
         notifyError("Error occurred while logging in user");
-        navigate(constants.routes.ERRORROUTE, { state: { error: error.message, errorCode: error.code } });
+        navigate(constants.routes.ERRORROUTE, {
+          state: { error: error.message, errorCode: error.code },
+        });
       });
   };
 
@@ -101,6 +105,9 @@ export const LoginFormComponent = () => {
           Login
         </button>
       </form>
+      <div>
+        <RegisterFormComponent></RegisterFormComponent>
+      </div>
     </div>
   );
 };
