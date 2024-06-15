@@ -1,10 +1,10 @@
+import * as constants from "../../constants/index.js";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { ThreeCircles } from "react-loader-spinner";
 import { MemeComponent } from "./MemeComponent.jsx";
 import { SortButtonComponent } from "./SortButtonComponent.jsx";
-import * as constants from "../../constants/index.js";
-import { ThreeCircles } from "react-loader-spinner";
 import { notifyError } from "../Notifications/ToastNotification.jsx";
 
 export const MemeListComponent = ({ addedBy }) => {
@@ -44,14 +44,17 @@ export const MemeListComponent = ({ addedBy }) => {
         const memesList = response.data;
         const filteredMemesList = memesList
           .filter((meme) => {
-            if (
-              location === constants.routes.HOTPAGEROUTE ||
-              location === constants.routes.MAINROUTE
-            ) {
-              return meme ? meme.upvotes - meme.downvotes > 5 : null;
-            } else {
-              return meme ? meme.upvotes - meme.downvotes <= 5 : null;
-            }
+              if (addedBy) {
+                  return meme;
+              }
+             if (
+               location === constants.routes.HOTPAGEROUTE ||
+               location === constants.routes.MAINROUTE
+             ) {
+               return meme ? meme.upvotes - meme.downvotes > 5 : null;
+             } else {
+               return meme ? meme.upvotes - meme.downvotes <= 5 : null;
+             }
           })
           .sort((meme1, meme2) => sortMemes(meme1, meme2));
         setMemes(filteredMemesList);

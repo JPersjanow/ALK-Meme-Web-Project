@@ -1,11 +1,11 @@
+import * as constants from "../../constants/index.js";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import imgPlaceholder from "../../assets/img-placeholder.png";
-import * as constants from "../../constants/index.js";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { IoIosAddCircle } from "react-icons/io";
 import { useCookies } from "react-cookie";
+import imgPlaceholder from "../../assets/img-placeholder.png";
 import {
   notifyError,
   notifySuccess,
@@ -13,16 +13,20 @@ import {
 
 export const MemeFormComponent = () => {
   const imageMimeType = /image\/(png|jpg|jpeg)/i;
-  const [title, setTitle] = useState(
-    "This will be your Meme Title, start typing...",
-  );
+  let titlePlaceholder = "This will be your Meme Title, start typing..."
+  const [title, setTitle] = useState(titlePlaceholder);
   const [file, setFile] = useState(null);
   const [img, setImg] = useState(imgPlaceholder);
   const [cookies, setCookies] = useCookies();
   const navigate = useNavigate();
 
   const handleChange = (event) => {
-    setTitle(event.target.value);
+    if (event.target.value.length <= 15) {
+      setTitle(event.target.value);
+    } else {
+      notifyError("Meme title is too loong! 15 characters max")
+    }
+
   };
 
   const handleFileChange = (event) => {
@@ -38,6 +42,14 @@ export const MemeFormComponent = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if(title===titlePlaceholder) {
+      notifyError("Be a little bit more creative! Change the title");
+      return undefined;
+    }
+    if(img===imgPlaceholder) {
+      notifyError("Be a little bit more creative! Change the image");
+      return undefined;
+    }
 
     const payload = {
       title: title,

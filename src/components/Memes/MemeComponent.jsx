@@ -1,12 +1,13 @@
+import * as constants from "../../constants/index.js";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { generate } from "random-words";
 import axios from "axios";
-import * as constants from "../../constants/index.js";
-import { ButtonLikeComponent } from "./ButtonLikeCompontent.jsx";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
+import { BsFire } from "react-icons/bs";
+import { ButtonLikeComponent } from "./ButtonLikeCompontent.jsx";
 import { notifyError, notifySuccess } from "../Notifications/ToastNotification.jsx";
-import { generate } from "random-words";
 
 export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
   const [title, setTitle] = useState(meme.title);
@@ -64,8 +65,8 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
 
   return (
     <div>
-      <div className="meme-container">
-        <h1 className="meme-title">{title}</h1>
+      <div className={(location===constants.routes.USERPAGE && upvotes-downvotes>5) ? "meme-container--hot" : "meme-container"}>
+        <h1 className="meme-title">{(location===constants.routes.USERPAGE && upvotes-downvotes>5) ? <BsFire className="text-red-600"/> : "" }{title}</h1>
         <img src={img} alt={`Meme containing ${title}`} />
         <div className="meme-container-buttons">
           <ButtonLikeComponent

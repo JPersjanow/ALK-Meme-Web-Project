@@ -1,12 +1,11 @@
+import { useLocation } from "react-router-dom";
 import { MdError } from "react-icons/md";
 import { BiSolidMessageSquareError } from "react-icons/bi";
-import { useLocation } from "react-router-dom";
 
 export const ErrorPage = () => {
     let location = useLocation();
     console.log(location);
     return (
-        <div>
           <div>
             <div className="title-header--red-shadow">
               <h2>Ooops! I think we got an error</h2>
@@ -26,6 +25,5 @@ export const ErrorPage = () => {
                   </div>
               }
           </div>
-        </div>
       );
 }
