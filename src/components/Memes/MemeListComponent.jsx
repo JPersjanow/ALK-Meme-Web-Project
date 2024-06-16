@@ -2,6 +2,7 @@ import * as constants from "../../constants/index.js";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import PropTypes from "prop-types";
 import { ThreeCircles } from "react-loader-spinner";
 import { MemeComponent } from "./MemeComponent.jsx";
 import { SortButtonComponent } from "./SortButtonComponent.jsx";
@@ -44,17 +45,17 @@ export const MemeListComponent = ({ addedBy }) => {
         const memesList = response.data;
         const filteredMemesList = memesList
           .filter((meme) => {
-              if (addedBy) {
-                  return meme;
-              }
-             if (
-               location === constants.routes.HOTPAGEROUTE ||
-               location === constants.routes.MAINROUTE
-             ) {
-               return meme ? meme.upvotes - meme.downvotes > 5 : null;
-             } else {
-               return meme ? meme.upvotes - meme.downvotes <= 5 : null;
-             }
+            if (addedBy) {
+              return meme;
+            }
+            if (
+              location === constants.routes.HOTPAGEROUTE ||
+              location === constants.routes.MAINROUTE
+            ) {
+              return meme ? meme.upvotes - meme.downvotes > 5 : null;
+            } else {
+              return meme ? meme.upvotes - meme.downvotes <= 5 : null;
+            }
           })
           .sort((meme1, meme2) => sortMemes(meme1, meme2));
         setMemes(filteredMemesList);
@@ -62,7 +63,9 @@ export const MemeListComponent = ({ addedBy }) => {
       })
       .catch((error) => {
         notifyError("Error getting memes");
-        navigate(constants.routes.ERRORROUTE, { state: { error: error.message, errorCode: error.code } })
+        navigate(constants.routes.ERRORROUTE, {
+          state: { error: error.message, errorCode: error.code },
+        });
       });
   }, [memeChangedFlag, location, sort]);
 
@@ -97,4 +100,8 @@ export const MemeListComponent = ({ addedBy }) => {
       )}
     </div>
   );
+};
+
+MemeListComponent.propTypes = {
+  addedBy: PropTypes.string,
 };

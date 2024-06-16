@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export const ButtonLikeComponent = ({
   updateLikes,
   buttonText,
@@ -16,4 +18,12 @@ export const ButtonLikeComponent = ({
       </div>
     </button>
   );
+};
+
+ButtonLikeComponent.propTypes = {
+  updateLikes: PropTypes.func.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  updateLikeSwitch: PropTypes.string.isRequired,
+  buttonClass: PropTypes.string,
+  numberVotes: PropTypes.number,
 };

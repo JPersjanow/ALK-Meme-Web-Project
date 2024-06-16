@@ -7,7 +7,11 @@ import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 import { BsFire } from "react-icons/bs";
 import { ButtonLikeComponent } from "./ButtonLikeCompontent.jsx";
-import { notifyError, notifySuccess } from "../Notifications/ToastNotification.jsx";
+import {
+  notifyError,
+  notifySuccess,
+} from "../Notifications/ToastNotification.jsx";
+import PropTypes from "prop-types";
 
 export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
   const [title, setTitle] = useState(meme.title);
@@ -65,8 +69,21 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
 
   return (
     <div>
-      <div className={(location===constants.routes.USERPAGE && upvotes-downvotes>5) ? "meme-container--hot" : "meme-container"}>
-        <h1 className="meme-title">{(location===constants.routes.USERPAGE && upvotes-downvotes>5) ? <BsFire className="text-red-600"/> : "" }{title}</h1>
+      <div
+        className={
+          location === constants.routes.USERPAGE && upvotes - downvotes > 5
+            ? "meme-container--hot"
+            : "meme-container"
+        }
+      >
+        <h1 className="meme-title">
+          {location === constants.routes.USERPAGE && upvotes - downvotes > 5 ? (
+            <BsFire className="text-red-600" />
+          ) : (
+            ""
+          )}
+          {title}
+        </h1>
         <img src={img} alt={`Meme containing ${title}`} />
         <div className="meme-container-buttons">
           <ButtonLikeComponent
@@ -87,4 +104,15 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
       </div>
     </div>
   );
+};
+
+MemeComponent.propTypes = {
+  meme: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    upvotes: PropTypes.number.isRequired,
+    downvotes: PropTypes.number.isRequired,
+  }).isRequired,
+  setMemeChangedFlag: PropTypes.func.isRequired,
 };
