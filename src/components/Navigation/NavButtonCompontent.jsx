@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
 export const NavButtonComponent = ({ route, text, icon, className }) => {
@@ -11,4 +12,11 @@ export const NavButtonComponent = ({ route, text, icon, className }) => {
       </NavLink>
     </li>
   );
+};
+
+NavButtonComponent.propTypes = {
+  route: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  icon: PropTypes.string,
+  className: PropTypes.string,
 };

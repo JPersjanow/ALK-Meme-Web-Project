@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { FaArrowAltCircleDown, FaArrowAltCircleUp } from "react-icons/fa";
 
 export const SortButtonComponent = ({ sortState, handleFunction }) => {
@@ -11,4 +12,9 @@ export const SortButtonComponent = ({ sortState, handleFunction }) => {
       {sortState ? "Show newest" : "Show oldest"}
     </button>
   );
+};
+
+SortButtonComponent.propTypes = {
+  sortState: PropTypes.bool.isRequired,
+  handleFunction: PropTypes.func.isRequired,
 };
