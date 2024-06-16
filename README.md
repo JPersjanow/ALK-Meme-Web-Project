@@ -15,6 +15,7 @@ React application simulating Meme forum with ability to like/dislike, sort and a
 
 ## Additional libraries used
 
+- Prop types validations: prop-types
 - Toaster notifications: react-toastify
 - Spinners: react-loader-spinner
 - Icons: react-icons
