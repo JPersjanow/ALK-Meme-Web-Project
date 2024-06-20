@@ -4,11 +4,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import PropTypes from "prop-types";
 import { ThreeCircles } from "react-loader-spinner";
-import { MemeComponent } from "./MemeComponent.jsx";
-import { SortButtonComponent } from "./SortButtonComponent.jsx";
+import { Meme } from "./Meme.jsx";
+import { MemeSortButton } from "./MemeSortButton.jsx";
 import { notifyError } from "../Notifications/ToastNotification.jsx";
 
-export const MemeListComponent = ({ addedBy }) => {
+export const MemeList = ({ addedBy }) => {
   const [memes, setMemes] = useState(null);
   const [memeChangedFlag, setMemeChangedFlag] = useState(false);
   const location = useLocation().pathname;
@@ -71,18 +71,18 @@ export const MemeListComponent = ({ addedBy }) => {
 
   return (
     <div className="meme-list-container">
-      <SortButtonComponent
+      <MemeSortButton
         sortState={sort}
         handleFunction={handleSortClick}
-      ></SortButtonComponent>
+      ></MemeSortButton>
       {memes ? (
         memes.map((meme) => {
           return (
-            <MemeComponent
+            <Meme
               key={meme.id}
               meme={meme}
               setMemeChangedFlag={setMemeChangedFlag}
-            ></MemeComponent>
+            ></Meme>
           );
         })
       ) : (
@@ -102,6 +102,6 @@ export const MemeListComponent = ({ addedBy }) => {
   );
 };
 
-MemeListComponent.propTypes = {
+MemeList.propTypes = {
   addedBy: PropTypes.string,
 };

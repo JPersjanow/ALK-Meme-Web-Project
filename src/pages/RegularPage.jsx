@@ -1,4 +1,4 @@
-import { MemeListComponent } from "../components/Memes/MemeListComponent.jsx";
+import { MemeList } from "../components/Memes/MemeList.jsx";
 import { BiSolidHome } from "react-icons/bi";
 
 export const RegularPage = () => {
@@ -10,7 +10,7 @@ export const RegularPage = () => {
           <BiSolidHome></BiSolidHome>
         </div>
       </div>
-      <MemeListComponent></MemeListComponent>
+      <MemeList></MemeList>
     </div>
   );
 };

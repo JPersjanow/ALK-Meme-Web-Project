@@ -6,14 +6,14 @@ import axios from "axios";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 import { BsFire } from "react-icons/bs";
-import { ButtonLikeComponent } from "./ButtonLikeCompontent.jsx";
+import { ButtonLikeComponent } from "./MemeButtonVote.jsx";
 import {
   notifyError,
   notifySuccess,
 } from "../Notifications/ToastNotification.jsx";
 import PropTypes from "prop-types";
 
-export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
+export const Meme = ({ meme, setMemeChangedFlag }) => {
   const [title, setTitle] = useState(meme.title);
   const [img, setImg] = useState(meme.img);
   const [upvotes, setUpvotes] = useState(meme.upvotes);
@@ -106,7 +106,7 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
   );
 };
 
-MemeComponent.propTypes = {
+Meme.propTypes = {
   meme: PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,

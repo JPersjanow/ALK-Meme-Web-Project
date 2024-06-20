@@ -6,7 +6,7 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { FaUserPlus } from "react-icons/fa6";
 
-export const RegisterFormComponent = () => {
+export const RegisterForm = () => {
   const [usernameInputStyleModifier, setUsernameInputStyleModifier] =
     useState("");
   const [passwordInputStyleModifier, setPasswordInputStyleModifier] =
@@ -42,7 +42,7 @@ export const RegisterFormComponent = () => {
     }
 
     return userInputStatus;
-  }
+  };
 
   const registerUser = (usernameValue, lastNameValue) => {
     setCookies(constants.cookies.COOKIE_USER_LOGGED, true);
@@ -52,7 +52,7 @@ export const RegisterFormComponent = () => {
     });
     notifySuccess("Registered! Hello you!");
     navigate(constants.routes.USERPAGE);
-  }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -66,7 +66,8 @@ export const RegisterFormComponent = () => {
       firstNameValue: firstNameValue,
       lastNameValue: lastNameValue,
       usernameValue: usernameValue,
-      passwordValue: passwordValue});
+      passwordValue: passwordValue,
+    });
 
     if (!inputsStatus) {
       return 1;
@@ -92,7 +93,7 @@ export const RegisterFormComponent = () => {
         registerUser(usernameValue, lastNameValue);
       })
       .catch((error) => {
-        if(error.message === "Username already taken") {
+        if (error.message === "Username already taken") {
           notifyError(error.message);
           setUsernameInputStyleModifier("--error");
         } else {
@@ -107,7 +108,10 @@ export const RegisterFormComponent = () => {
   return (
     <div className="user-management-form-container">
       <form onSubmit={handleSubmit} className="user-management-form">
-        <label className="user-management-form-label" htmlFor="firstNameField-register">
+        <label
+          className="user-management-form-label"
+          htmlFor="firstNameField-register"
+        >
           First Name
         </label>
         <input
@@ -115,7 +119,10 @@ export const RegisterFormComponent = () => {
           className={`user-management-form-input${firstNameInputStyleModifier}`}
           placeholder="First Name"
         ></input>
-        <label className="user-management-form-label" htmlFor="lastNameLabel-register">
+        <label
+          className="user-management-form-label"
+          htmlFor="lastNameLabel-register"
+        >
           Last Name
         </label>
         <input
@@ -123,7 +130,10 @@ export const RegisterFormComponent = () => {
           className={`user-management-form-input${lastNameInputStyleModifier}`}
           placeholder="Last Name"
         ></input>
-        <label className="user-management-form-label" htmlFor="usernameField-register">
+        <label
+          className="user-management-form-label"
+          htmlFor="usernameField-register"
+        >
           Username
         </label>
         <input
@@ -131,7 +141,10 @@ export const RegisterFormComponent = () => {
           className={`user-management-form-input${usernameInputStyleModifier}`}
           placeholder="Username"
         ></input>
-        <label className="user-management-form-label" htmlFor="passwordField-register">
+        <label
+          className="user-management-form-label"
+          htmlFor="passwordField-register"
+        >
           Password
         </label>
         <input

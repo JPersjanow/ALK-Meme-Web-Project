@@ -11,9 +11,9 @@ import {
   notifySuccess,
 } from "../Notifications/ToastNotification.jsx";
 
-export const MemeFormComponent = () => {
+export const MemeForm = () => {
   const imageMimeType = /image\/(png|jpg|jpeg)/i;
-  let titlePlaceholder = "This will be your Meme Title, start typing..."
+  let titlePlaceholder = "This will be your Meme Title, start typing...";
   const [title, setTitle] = useState(titlePlaceholder);
   const [file, setFile] = useState(null);
   const [img, setImg] = useState(imgPlaceholder);
@@ -24,9 +24,8 @@ export const MemeFormComponent = () => {
     if (event.target.value.length <= 15) {
       setTitle(event.target.value);
     } else {
-      notifyError("Meme title is too loong! 15 characters max")
+      notifyError("Meme title is too loong! 15 characters max");
     }
-
   };
 
   const handleFileChange = (event) => {
@@ -42,11 +41,11 @@ export const MemeFormComponent = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if(title===titlePlaceholder) {
+    if (title === titlePlaceholder) {
       notifyError("Be a little bit more creative! Change the title");
       return undefined;
     }
-    if(img===imgPlaceholder) {
+    if (img === imgPlaceholder) {
       notifyError("Be a little bit more creative! Change the image");
       return undefined;
     }
@@ -67,7 +66,9 @@ export const MemeFormComponent = () => {
       })
       .catch((error) => {
         notifyError("Error occurred while adding meme!");
-        navigate(constants.routes.ERRORROUTE, { state: { error: error.message, errorCode: error.code } });
+        navigate(constants.routes.ERRORROUTE, {
+          state: { error: error.message, errorCode: error.code },
+        });
       });
   };
 

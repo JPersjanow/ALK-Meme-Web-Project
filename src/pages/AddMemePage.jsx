@@ -1,4 +1,4 @@
-import { MemeFormComponent } from "../components/Memes/MemeFormComponent.jsx";
+import { MemeForm } from "../components/Memes/MemeForm.jsx";
 import { MdOutlineAddCircle } from "react-icons/md";
 
 export const AddMemePage = () => {
@@ -10,7 +10,7 @@ export const AddMemePage = () => {
           <MdOutlineAddCircle></MdOutlineAddCircle>
         </div>
       </div>
-      <MemeFormComponent></MemeFormComponent>
+      <MemeForm></MemeForm>
     </div>
   );
 };

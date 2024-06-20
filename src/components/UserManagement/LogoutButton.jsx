@@ -4,7 +4,7 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { notify } from "../Notifications/ToastNotification.jsx";
 
-export const LogoutButtonComponent = ({ text, icon, className }) => {
+export const LogoutButton = ({ text, icon, className }) => {
   const [cookies, setCookies, removeCookie] = useCookies();
   const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ export const LogoutButtonComponent = ({ text, icon, className }) => {
   );
 };
 
-LogoutButtonComponent.propTypes = {
+LogoutButton.propTypes = {
   text: PropTypes.string,
   icon: PropTypes.object,
   className: PropTypes.string,

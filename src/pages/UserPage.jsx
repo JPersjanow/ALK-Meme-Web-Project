@@ -1,6 +1,6 @@
 import { useCookies } from "react-cookie";
 import { IoPersonSharp } from "react-icons/io5";
-import { MemeListComponent } from "../components/Memes/MemeListComponent.jsx";
+import { MemeList } from "../components/Memes/MemeList.jsx";
 
 export const UserPage = () => {
   const [cookies, setCookies] = useCookies();
@@ -13,9 +13,7 @@ export const UserPage = () => {
         </div>
       </div>
       <h1 className="text-center">Check out how your memes are doing!</h1>
-      <MemeListComponent
-        addedBy={cookies.userData.username}
-      ></MemeListComponent>
+      <MemeList addedBy={cookies.userData.username}></MemeList>
     </div>
   );
 };

@@ -9,7 +9,7 @@ import {
   notifySuccess,
 } from "../Notifications/ToastNotification.jsx";
 
-export const LoginFormComponent = () => {
+export const LoginForm = () => {
   const [usernameInputStyleModifier, setUsernameInputStyleModifier] =
     useState("");
   const [passwordInputStyleModifier, setPasswordInputStyleModifier] =
