@@ -17,6 +17,6 @@ export const NavButtonComponent = ({ route, text, icon, className }) => {
 NavButtonComponent.propTypes = {
   route: PropTypes.string.isRequired,
   text: PropTypes.string,
-  icon: PropTypes.string,
+  icon: PropTypes.object,
   className: PropTypes.string,
 };
