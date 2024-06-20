@@ -1,4 +1,4 @@
-import { NavComponent } from "./components/Navigation/NavCompontent.jsx";
+import { NavComponent } from "./components/Navigation/Nav.jsx";
 import { HotPage } from "./pages/HotPage";
 import { RegularPage } from "./pages/RegularPage";
 import { ErrorPage } from "./pages/ErrorPage";
@@ -14,7 +14,10 @@ import MemeBackground from "./assets/meme-background.png";
 
 function App() {
   return (
-    <div className="App background h-screen" style={{backgroundImage: `url(${MemeBackground})`}}>
+    <div
+      className="App background h-screen"
+      style={{ backgroundImage: `url(${MemeBackground})` }}
+    >
       <BrowserRouter>
         <NavComponent></NavComponent>
         <main>

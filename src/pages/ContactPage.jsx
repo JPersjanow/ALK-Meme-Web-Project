@@ -1,5 +1,5 @@
 import { MdOutlineContactSupport } from "react-icons/md";
-import { ContactComponent } from "../components/Contact/ContactComponent.jsx";
+import { ContactPane } from "../components/Contact/ContactPane.jsx";
 import JPContactImage from "../assets/JP-contact-profile.png";
 import MKContactImage from "../assets/MK-contact-profile.png";
 
@@ -24,18 +24,18 @@ export const ContactPage = () => {
       <div className="title-header--orange-shadow">
         <h2>Meet the creators</h2>
         <div className="title-header-icon text-orange-500">
-          <MdOutlineContactSupport></MdOutlineContactSupport>
+          <MdOutlineContactSupport />
         </div>
       </div>
       <div className="container-person-module">
         {contacts.map((element) => {
           return (
-            <ContactComponent
+            <ContactPane
               key={element.id}
               name={element.name}
               url={element.url}
               image={element.img}
-            ></ContactComponent>
+            />
           );
         })}
       </div>

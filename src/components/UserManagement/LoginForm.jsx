@@ -9,7 +9,7 @@ import {
   notifySuccess,
 } from "../Notifications/ToastNotification.jsx";
 
-export const LoginFormComponent = () => {
+export const LoginForm = () => {
   const [usernameInputStyleModifier, setUsernameInputStyleModifier] =
     useState("");
   const [passwordInputStyleModifier, setPasswordInputStyleModifier] =
@@ -100,7 +100,7 @@ export const LoginFormComponent = () => {
           placeholder="Password"
         ></input>
         <button className="button-login group" type="submit">
-          <IoLogIn className="button-submit-icon group-hover:text-2xl"></IoLogIn>
+          <IoLogIn className="button-submit-icon group-hover:text-2xl" />
           Login
         </button>
       </form>

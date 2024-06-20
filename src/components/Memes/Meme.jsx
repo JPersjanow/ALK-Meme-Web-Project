@@ -6,16 +6,16 @@ import axios from "axios";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 import { BsFire } from "react-icons/bs";
-import { ButtonLikeComponent } from "./ButtonLikeCompontent.jsx";
+import { ButtonLikeComponent } from "./MemeButtonVote.jsx";
 import {
   notifyError,
   notifySuccess,
 } from "../Notifications/ToastNotification.jsx";
 import PropTypes from "prop-types";
 
-export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
-  const [title, setTitle] = useState(meme.title);
-  const [img, setImg] = useState(meme.img);
+export const Meme = ({ meme, setMemeChangedFlag }) => {
+  const title = meme.title;
+  const img = meme.img;
   const [upvotes, setUpvotes] = useState(meme.upvotes);
   const [downvotes, setDownvotes] = useState(meme.downvotes);
   const location = useLocation().pathname;
@@ -88,25 +88,25 @@ export const MemeComponent = ({ meme, setMemeChangedFlag }) => {
         <div className="meme-container-buttons">
           <ButtonLikeComponent
             updateLikes={updateLikes}
-            buttonText={<AiOutlineLike></AiOutlineLike>}
+            buttonText={<AiOutlineLike />}
             updateLikeSwitch={"upvote"}
             buttonClass="button-upvote"
             numberVotes={upvotes}
-          ></ButtonLikeComponent>
+          />
           <ButtonLikeComponent
             updateLikes={updateLikes}
-            buttonText={<AiOutlineDislike></AiOutlineDislike>}
+            buttonText={<AiOutlineDislike />}
             updateLikeSwitch={"downvote"}
             buttonClass="button-downvote"
             numberVotes={downvotes}
-          ></ButtonLikeComponent>
+          />
         </div>
       </div>
     </div>
   );
 };
 
-MemeComponent.propTypes = {
+Meme.propTypes = {
   meme: PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,

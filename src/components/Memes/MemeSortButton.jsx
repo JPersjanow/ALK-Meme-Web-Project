@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { FaArrowAltCircleDown, FaArrowAltCircleUp } from "react-icons/fa";
 
-export const SortButtonComponent = ({ sortState, handleFunction }) => {
+export const MemeSortButton = ({ sortState, handleFunction }) => {
   return (
     <button className="button-sort group" onClick={handleFunction}>
       {sortState ? (
@@ -14,7 +14,7 @@ export const SortButtonComponent = ({ sortState, handleFunction }) => {
   );
 };
 
-SortButtonComponent.propTypes = {
+MemeSortButton.propTypes = {
   sortState: PropTypes.bool.isRequired,
   handleFunction: PropTypes.func.isRequired,
 };

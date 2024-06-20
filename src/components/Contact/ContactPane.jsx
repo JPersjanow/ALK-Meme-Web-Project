@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { IoLogoLinkedin } from "react-icons/io5";
 
-export const ContactComponent = ({ name, url, image }) => {
+export const ContactPane = ({ name, url, image }) => {
   return (
     <div className="person-module">
       <img
@@ -11,13 +11,13 @@ export const ContactComponent = ({ name, url, image }) => {
       />
       <h3>{name}</h3>
       <a href={url}>
-        <IoLogoLinkedin></IoLogoLinkedin>
+        <IoLogoLinkedin />
       </a>
     </div>
   );
 };
 
-ContactComponent.propTypes = {
+ContactPane.propTypes = {
   name: PropTypes.string,
   url: PropTypes.string,
   image: PropTypes.string,

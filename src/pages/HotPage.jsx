@@ -1,4 +1,4 @@
-import { MemeListComponent } from "../components/Memes/MemeListComponent.jsx";
+import { MemeList } from "../components/Memes/MemeList.jsx";
 import { BsFire } from "react-icons/bs";
 
 export const HotPage = () => {
@@ -7,10 +7,10 @@ export const HotPage = () => {
       <div className="title-header--red-shadow">
         <h2>Hottest Memes in town!</h2>
         <div className="title-header-icon text-red-500">
-          <BsFire></BsFire>
+          <BsFire />
         </div>
       </div>
-      <MemeListComponent></MemeListComponent>
+      <MemeList />
     </div>
   );
 };
