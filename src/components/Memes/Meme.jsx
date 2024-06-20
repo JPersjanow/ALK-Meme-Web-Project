@@ -14,8 +14,8 @@ import {
 import PropTypes from "prop-types";
 
 export const Meme = ({ meme, setMemeChangedFlag }) => {
-  const [title, setTitle] = useState(meme.title);
-  const [img, setImg] = useState(meme.img);
+  const title = meme.title;
+  const img = meme.img;
   const [upvotes, setUpvotes] = useState(meme.upvotes);
   const [downvotes, setDownvotes] = useState(meme.downvotes);
   const location = useLocation().pathname;
