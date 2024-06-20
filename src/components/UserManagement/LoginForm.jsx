@@ -100,7 +100,7 @@ export const LoginForm = () => {
           placeholder="Password"
         ></input>
         <button className="button-login group" type="submit">
-          <IoLogIn className="button-submit-icon group-hover:text-2xl"></IoLogIn>
+          <IoLogIn className="button-submit-icon group-hover:text-2xl" />
           Login
         </button>
       </form>

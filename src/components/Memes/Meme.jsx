@@ -88,18 +88,18 @@ export const Meme = ({ meme, setMemeChangedFlag }) => {
         <div className="meme-container-buttons">
           <ButtonLikeComponent
             updateLikes={updateLikes}
-            buttonText={<AiOutlineLike></AiOutlineLike>}
+            buttonText={<AiOutlineLike />}
             updateLikeSwitch={"upvote"}
             buttonClass="button-upvote"
             numberVotes={upvotes}
-          ></ButtonLikeComponent>
+          />
           <ButtonLikeComponent
             updateLikes={updateLikes}
-            buttonText={<AiOutlineDislike></AiOutlineDislike>}
+            buttonText={<AiOutlineDislike />}
             updateLikeSwitch={"downvote"}
             buttonClass="button-downvote"
             numberVotes={downvotes}
-          ></ButtonLikeComponent>
+          />
         </div>
       </div>
     </div>

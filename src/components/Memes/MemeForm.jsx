@@ -116,14 +116,14 @@ export const MemeForm = () => {
           </div>
           <div className="add-meme-form-input-container">
             <div className="file-upload">
-              <FaCloudUploadAlt></FaCloudUploadAlt>
+              <FaCloudUploadAlt />
               <h3>Click box to upload</h3>
               <p>Maximum file size 10mb</p>
               <input type="file" onChange={handleFileChange} />
             </div>
           </div>
           <button className="button-submit group" type="submit">
-            <IoIosAddCircle className="button-submit-icon group-hover:rotate-180"></IoIosAddCircle>
+            <IoIosAddCircle className="button-submit-icon group-hover:rotate-180" />
             Add the Meme!
           </button>
         </form>

@@ -27,27 +27,27 @@ export const NavComponent = () => {
               text="Hot Memes 🔥"
               className="navbar-list--hot"
               icon={<BsFire />}
-            ></NavButtonComponent>
+            />
             <NavButtonComponent
               route={constants.routes.REGULARPAGEROUTE}
               text="All Memes 🏠"
               className="navbar-list--regular"
               icon={<BiSolidHome />}
-            ></NavButtonComponent>
+            />
             {cookies.userLogged && (
               <NavButtonComponent
                 route={constants.routes.ADDMEMEPAGEROUTE}
                 text="Add Meme ➕"
                 className="navbar-list--add"
                 icon={<MdOutlineAddCircle />}
-              ></NavButtonComponent>
+              />
             )}
             <NavButtonComponent
               route={constants.routes.CONTACTPAGE}
               text="Meet the Makers 🫂"
               className="navbar-list--contact"
               icon={<MdOutlineContactSupport />}
-            ></NavButtonComponent>
+            />
           </ul>
         </div>
         <div className="navbar-bottom">
@@ -58,21 +58,21 @@ export const NavComponent = () => {
                 text={`${cookies.userData.username}'s profile 👁`}
                 className="navbar-list--profile"
                 icon={<IoPersonSharp />}
-              ></NavButtonComponent>
+              />
             )}
             {cookies.userLogged ? (
               <LogoutButton
                 text="Logout 🚪"
                 className="navbar-list--logout"
                 icon={<IoLogOut />}
-              ></LogoutButton>
+              />
             ) : (
               <NavButtonComponent
                 route={constants.routes.LOGINPAGE}
                 text="Login 🚪"
                 className="navbar-list--login"
                 icon={<IoLogIn />}
-              ></NavButtonComponent>
+              />
             )}
           </ul>
         </div>

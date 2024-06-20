@@ -154,7 +154,7 @@ export const RegisterForm = () => {
           placeholder="Password"
         ></input>
         <button className="button-login group" type="submit">
-          <FaUserPlus className="button-submit-icon group-hover:text-2xl"></FaUserPlus>
+          <FaUserPlus className="button-submit-icon group-hover:text-2xl" />
           Register
         </button>
       </form>

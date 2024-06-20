@@ -11,7 +11,7 @@ export const ContactPane = ({ name, url, image }) => {
       />
       <h3>{name}</h3>
       <a href={url}>
-        <IoLogoLinkedin></IoLogoLinkedin>
+        <IoLogoLinkedin />
       </a>
     </div>
   );

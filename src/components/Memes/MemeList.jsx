@@ -71,10 +71,7 @@ export const MemeList = ({ addedBy }) => {
 
   return (
     <div className="meme-list-container">
-      <MemeSortButton
-        sortState={sort}
-        handleFunction={handleSortClick}
-      ></MemeSortButton>
+      <MemeSortButton sortState={sort} handleFunction={handleSortClick} />
       {memes ? (
         memes.map((meme) => {
           return (
@@ -82,7 +79,7 @@ export const MemeList = ({ addedBy }) => {
               key={meme.id}
               meme={meme}
               setMemeChangedFlag={setMemeChangedFlag}
-            ></Meme>
+            />
           );
         })
       ) : (
@@ -96,7 +93,7 @@ export const MemeList = ({ addedBy }) => {
           ariaLabel="three-circles-loading"
           wrapperStyle={{}}
           wrapperClass="loading"
-        ></ThreeCircles>
+        />
       )}
     </div>
   );
