@@ -9,11 +9,11 @@ export const UserPage = () => {
       <div className="title-header--cyan-shadow">
         <h2>Hello {cookies.userData.username}</h2>
         <div className="title-header-icon text-cyan-500">
-          <IoPersonSharp></IoPersonSharp>
+          <IoPersonSharp />
         </div>
       </div>
       <h1 className="text-center">Check out how your memes are doing!</h1>
-      <MemeList addedBy={cookies.userData.username}></MemeList>
+      <MemeList addedBy={cookies.userData.username} />
     </div>
   );
 };

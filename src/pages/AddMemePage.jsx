@@ -7,10 +7,10 @@ export const AddMemePage = () => {
       <div className="title-header--blue-shadow">
         <h2 className="">Add your own Meme</h2>
         <div className="title-header-icon text-blue-500">
-          <MdOutlineAddCircle></MdOutlineAddCircle>
+          <MdOutlineAddCircle />
         </div>
       </div>
-      <MemeForm></MemeForm>
+      <MemeForm />
     </div>
   );
 };

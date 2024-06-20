@@ -17,16 +17,16 @@ export const LoginPage = () => {
       <div className="title-header--violet-shadow">
         <h2>Welcome!</h2>
         <div className="title-header-icon text-violet-500">
-          <IoLogIn></IoLogIn>
+          <IoLogIn />
         </div>
       </div>
       <div className="login-container">
-        <LoginForm></LoginForm>
+        <LoginForm />
         <h2>Not a user?</h2>
-        <RegisterButton handleOnClick={showRegisterComponent}></RegisterButton>
+        <RegisterButton handleOnClick={showRegisterComponent} />
       </div>
       <div className={`register-container${registerContainerStyleModifier}`}>
-        <RegisterForm></RegisterForm>
+        <RegisterForm />
       </div>
     </div>
   );

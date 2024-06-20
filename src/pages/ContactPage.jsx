@@ -24,7 +24,7 @@ export const ContactPage = () => {
       <div className="title-header--orange-shadow">
         <h2>Meet the creators</h2>
         <div className="title-header-icon text-orange-500">
-          <MdOutlineContactSupport></MdOutlineContactSupport>
+          <MdOutlineContactSupport />
         </div>
       </div>
       <div className="container-person-module">
@@ -35,7 +35,7 @@ export const ContactPage = () => {
               name={element.name}
               url={element.url}
               image={element.img}
-            ></ContactPane>
+            />
           );
         })}
       </div>

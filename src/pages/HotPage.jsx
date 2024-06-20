@@ -7,10 +7,10 @@ export const HotPage = () => {
       <div className="title-header--red-shadow">
         <h2>Hottest Memes in town!</h2>
         <div className="title-header-icon text-red-500">
-          <BsFire></BsFire>
+          <BsFire />
         </div>
       </div>
-      <MemeList></MemeList>
+      <MemeList />
     </div>
   );
 };

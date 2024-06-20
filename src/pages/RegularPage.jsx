@@ -7,10 +7,10 @@ export const RegularPage = () => {
       <div className="title-header--green-shadow">
         <h2>Great Memes</h2>
         <div className="title-header-icon text-green-500">
-          <BiSolidHome></BiSolidHome>
+          <BiSolidHome />
         </div>
       </div>
-      <MemeList></MemeList>
+      <MemeList />
     </div>
   );
 };
