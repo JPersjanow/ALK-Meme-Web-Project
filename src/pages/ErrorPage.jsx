@@ -4,7 +4,6 @@ import { BiSolidMessageSquareError } from "react-icons/bi";
 
 export const ErrorPage = () => {
   let location = useLocation();
-  console.log(location);
   return (
     <div>
       <div className="title-header--red-shadow">
