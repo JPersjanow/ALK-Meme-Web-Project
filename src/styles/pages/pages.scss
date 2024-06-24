@@ -31,9 +31,7 @@
   }
 
   h2 {
-    font-size: 40px;
-    color: white;
-    margin-right: 8px;
+    @apply text-4xl text-white mr-2 max-[500px]:text-lg;
   }
 
   img {

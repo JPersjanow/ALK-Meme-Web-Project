@@ -3,7 +3,7 @@ import { BsFire } from "react-icons/bs";
 
 export const HotPage = () => {
   return (
-    <div>
+    <div className="title-container">
       <div className="title-header--red-shadow">
         <h2>Hottest Memes in town!</h2>
         <div className="title-header-icon text-red-500">

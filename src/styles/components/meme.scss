@@ -33,3 +33,13 @@
     }
   }
 }
+
+// mobilne
+
+.meme-container {
+  @apply max-[500px]:w-[15rem];
+}
+
+.meme-title {
+  @apply max-[500px]:text-sm;
+}
