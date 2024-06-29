@@ -3,7 +3,6 @@
   "private": false,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://jpersjanow.github.io/<repo>/",
   "scripts": {
     "dev": "vite",
     "start:db": "json-server --watch src/constants/memdatabase.json",
