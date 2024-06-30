@@ -18,21 +18,20 @@ export const Meme = ({ meme, setMemeChangedFlag }) => {
   const img = meme.img;
   const [upvotes, setUpvotes] = useState(meme.upvotes);
   const [downvotes, setDownvotes] = useState(meme.downvotes);
+  const [buttonDisabled, setButtonDisabled] = useState(false);
   const location = useLocation().pathname;
 
   const updateStateAndReturnPayload = (type, response) => {
     switch (type) {
       case "upvote":
-        setUpvotes(response.data.upvotes + 1);
+        setUpvotes(response.data[0].upvotes + 1);
         return {
-          ...response.data,
-          upvotes: response.data.upvotes + 1,
+          upvotes: response.data[0].upvotes + 1,
         };
       case "downvote":
-        setDownvotes(response.data.downvotes + 1);
+        setDownvotes(response.data[0].downvotes + 1);
         return {
-          ...response.data,
-          downvotes: response.data.downvotes + 1,
+          downvotes: response.data[0].downvotes + 1,
         };
       default:
         return {
@@ -42,16 +41,20 @@ export const Meme = ({ meme, setMemeChangedFlag }) => {
   };
 
   const updateLikes = (type) => () => {
+    setButtonDisabled(true);
     axios
-      .get(constants.endpoints.MEME(meme.id))
+      .get(constants.endpoints.MEME(meme.id), constants.endpoints.CONFIG)
       .then((response) => {
+        console.log(response);
         const payload = updateStateAndReturnPayload(type, response);
-        return axios.put(constants.endpoints.MEME(meme.id), payload);
+        return axios.patch(constants.endpoints.MEME(meme.id), payload, constants.endpoints.CONFIG);
       })
       .then((response) => {
         notifySuccess(generate() + "!");
+        setButtonDisabled(false);
       })
       .catch((error) => {
+        console.log(error);
         notifyError("We couldn't update the likes, please try again later");
       });
   };
@@ -92,6 +95,7 @@ export const Meme = ({ meme, setMemeChangedFlag }) => {
             updateLikeSwitch={"upvote"}
             buttonClass="button-upvote"
             numberVotes={upvotes}
+            disabled={buttonDisabled}
           />
           <ButtonLikeComponent
             updateLikes={updateLikes}
@@ -99,6 +103,7 @@ export const Meme = ({ meme, setMemeChangedFlag }) => {
             updateLikeSwitch={"downvote"}
             buttonClass="button-downvote"
             numberVotes={downvotes}
+            disabled={buttonDisabled}
           />
         </div>
       </div>
@@ -108,7 +113,7 @@ export const Meme = ({ meme, setMemeChangedFlag }) => {
 
 Meme.propTypes = {
   meme: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired && PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     upvotes: PropTypes.number.isRequired,

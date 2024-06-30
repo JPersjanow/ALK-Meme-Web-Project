@@ -10,7 +10,7 @@ React application simulating Meme forum with ability to like/dislike, sort and a
 - Styling: SASS, TailwindCSS
 - Routing management: react-router-dom
 - Requests management: axios library
-- Database management: js-server library
+- Database management: supabase
 - Cookie management: react-cookie
 
 ## Additional libraries used
@@ -34,9 +34,9 @@ Project comes with a backend mockup using json-server, main application is React
 
 run `npm install` from inside the project folder
 
-### Start backend mockup
+### Configure API key
 
-run `start:db` npm script or execute command `json-server --watch src/constants/memdatabase.json`
+create a .env.local file in root directory and define VITE_API_URL and VITE_API_KEY
 
 ### Start the app
 

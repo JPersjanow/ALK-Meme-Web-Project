@@ -1,8 +1,17 @@
-const port = 3000;
-export const MEMES = `http://localhost:${port}/memes`;
+const envUrl = import.meta.env.VITE_API_URL;
+const envApiKey = import.meta.env.VITE_API_KEY;
+var headers =
+    {
+        "apikey": envApiKey,
+        "Authorization":`Bearer ${envApiKey}`
+    };
+var url = envUrl;
+
+export const MEMES = `${url}/memes`;
 export const MEMES_BY_ADDED_BY = (username) =>
-  `http://localhost:${port}/memes?added_by=${username}`;
-export const MEME = (id) => `http://localhost:${port}/memes/${id}`;
+  `${url}/memes?added_by=eq.${username}`;
+export const MEME = (id) => `${url}/memes?id=eq.${id}`;
 export const USER = (username) =>
-  `http://localhost:${port}/users?username=${username}`;
-export const USERS = `http://localhost:${port}/users`;
+  `${url}/users?username=eq.${username}`;
+export const USERS = `${url}/users`;
+export const CONFIG = { headers: headers };

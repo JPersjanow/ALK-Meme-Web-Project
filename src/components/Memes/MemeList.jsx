@@ -40,7 +40,7 @@ export const MemeList = ({ addedBy }) => {
 
   useEffect(() => {
     axios
-      .get(endpoint)
+      .get(endpoint, constants.endpoints.CONFIG)
       .then((response) => {
         const memesList = response.data;
         const filteredMemesList = memesList

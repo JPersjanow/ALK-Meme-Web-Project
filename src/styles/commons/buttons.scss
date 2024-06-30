@@ -1,6 +1,6 @@
 .button {
   &-like {
-    @apply mx-2 px-2 rounded-md text-white my-3 transition-all duration-500 ease-linear font-bold p-1;
+    @apply mx-2 px-2 rounded-md text-white my-3 transition-all duration-500 ease-linear font-bold p-1 disabled:bg-gray-600 disabled:hover:bg-gray-600;
   }
 
   &-upvote {
