@@ -74,7 +74,7 @@ export const RegisterForm = () => {
     }
 
     axios
-      .get(constants.endpoints.USER(usernameValue))
+      .get(constants.endpoints.USER(usernameValue), constants.endpoints.CONFIG)
       .then((response) => {
         if (response.data.length === 0) {
           const payload = {
@@ -84,7 +84,7 @@ export const RegisterForm = () => {
             lname: lastNameValue,
           };
 
-          return axios.post(constants.endpoints.USERS, payload);
+          return axios.post(constants.endpoints.USERS, payload, constants.endpoints.CONFIG);
         } else {
           throw new Error("Username already taken");
         }

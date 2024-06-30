@@ -59,7 +59,7 @@ export const LoginForm = () => {
 
   const loginUser = (username, password) => {
     axios
-      .get(constants.endpoints.USER(username))
+      .get(constants.endpoints.USER(username), constants.endpoints.CONFIG)
       .then((response) => {
         return returnUserQueryResponseStatus(response, password);
       })

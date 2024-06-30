@@ -5,10 +5,10 @@ export const ButtonLikeComponent = ({
   buttonText,
   updateLikeSwitch,
   buttonClass,
-  numberVotes,
+  numberVotes, disabled=false
 }) => {
   return (
-    <button
+    <button disabled={disabled}
       className={`button-like ${buttonClass}`}
       onClick={updateLikes(updateLikeSwitch)}
     >
@@ -26,4 +26,5 @@ ButtonLikeComponent.propTypes = {
   updateLikeSwitch: PropTypes.string.isRequired,
   buttonClass: PropTypes.string,
   numberVotes: PropTypes.number,
+  disabled: PropTypes.bool
 };

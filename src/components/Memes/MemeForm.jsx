@@ -7,6 +7,7 @@ import { IoIosAddCircle } from "react-icons/io";
 import { useCookies } from "react-cookie";
 import imgPlaceholder from "../../assets/img-placeholder.png";
 import {
+  notify,
   notifyError,
   notifySuccess,
 } from "../Notifications/ToastNotification.jsx";
@@ -50,16 +51,18 @@ export const MemeForm = () => {
       return undefined;
     }
 
+    notify("Uploading, please wait...");
+
     const payload = {
       title: title,
       upvotes: 0,
       downvotes: 0,
       img: img,
-      added_at: Date.now(),
-      added_by_user: cookies.userData.username,
+      added_at: ((new Date()).toISOString()).toLocaleString('zh-TW'),
+      added_by: cookies.userData.username,
     };
     axios
-      .post(constants.endpoints.MEMES, payload)
+      .post(constants.endpoints.MEMES, payload, constants.endpoints.CONFIG)
       .then((response) => {
         notifySuccess("Meme added");
         navigate(constants.routes.REGULARPAGEROUTE);
