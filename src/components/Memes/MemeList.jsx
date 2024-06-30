@@ -23,10 +23,12 @@ export const MemeList = ({ addedBy }) => {
   }
 
   const sortMemes = (meme1, meme2) => {
-    if (sort) {
-      return meme1.added_at - meme2.added_at;
+    var meme1Date = new Date(meme1.added_at);
+    var meme2Date = new Date(meme2.added_at);
+      if (sort) {
+      return meme1Date - meme2Date;
     } else {
-      return meme2.added_at - meme1.added_at;
+      return meme2Date - meme1Date;
     }
   };
 
