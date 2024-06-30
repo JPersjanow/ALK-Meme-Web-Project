@@ -4,6 +4,9 @@
 
 React application simulating Meme forum with ability to like/dislike, sort and add Memes
 
+## Check the demo
+Project is hosted on [Netlify](https://alk-best-memes.netlify.app)
+
 ## "Tech Stack"
 
 - Development environemnt: Vite
